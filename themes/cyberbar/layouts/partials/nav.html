@@ -1,0 +1,14 @@
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="{{ "/" | relURL }}" class="nav-logo">
+      <span class="bracket">[</span>
+      {{ .Site.Params.author | default "DR" }}
+      <span class="bracket">]</span>
+    </a>
+    <ul class="nav-links">
+      {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </div>
+</nav>

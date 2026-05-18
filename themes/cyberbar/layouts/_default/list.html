@@ -1,0 +1,47 @@
+{{ define "main" }}
+
+<div class="series-hero">
+  <div class="container">
+    {{ if .Params.series_icon }}<div class="series-icon">{{ .Params.series_icon }}</div>{{ end }}
+    {{ if .Params.series_tag }}<p class="section-label">{{ .Params.series_tag }}</p>{{ end }}
+    <h1 class="section-title" style="font-size: clamp(2.5rem, 5vw, 4rem);">{{ .Title }}</h1>
+    {{ with .Description }}<p style="color: var(--text-secondary); max-width: 560px; margin-top: 0.75rem;">{{ . }}</p>{{ end }}
+    {{ with .Content }}<div class="post-body" style="margin-top:1rem;">{{ . }}</div>{{ end }}
+  </div>
+</div>
+
+<section>
+  <div class="container">
+
+    {{ if .Pages }}
+      <div class="grid-3">
+        {{ range .Pages }}
+          <div class="card">
+            {{ if .Params.series }}
+              {{ if eq .Params.series "beer-drinkers-guide" }}
+                <span class="series-pill series-pill--beer">🍺 Beer Drinker's Guide</span>
+              {{ else if eq .Params.series "attackers-mindset" }}
+                <span class="series-pill series-pill--attack">🎯 Attacker's Mindset</span>
+              {{ end }}
+            {{ end }}
+
+            <div class="post-meta" style="margin-bottom:0.5rem;">
+              {{ with .Date }}<span>{{ . | time.Format "2 January 2006" }}</span>{{ end }}
+            </div>
+
+            <h3 class="card-title">{{ .Title }}</h3>
+            <p class="card-excerpt">{{ .Description | default (.Summary | truncate 120) }}</p>
+            <a href="{{ .Permalink }}" class="card-link">Read post</a>
+          </div>
+        {{ end }}
+      </div>
+    {{ else }}
+      <div style="text-align:center; padding: 4rem 0;">
+        <p style="font-family: var(--font-mono); color: var(--text-muted); font-size: 0.9rem;">// Episodes coming soon</p>
+      </div>
+    {{ end }}
+
+  </div>
+</section>
+
+{{ end }}

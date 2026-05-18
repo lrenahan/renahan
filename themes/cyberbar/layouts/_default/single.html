@@ -1,0 +1,64 @@
+{{ define "main" }}
+
+<div class="post-header" style="background: var(--bg-surface); border-bottom: 1px solid var(--border);">
+  <div class="container--narrow">
+    {{ if .Params.series }}
+      {{ if eq .Params.series "beer-drinkers-guide" }}
+        <span class="series-pill series-pill--beer" style="margin-bottom:1rem; display:inline-flex;">🍺 Beer Drinker's Guide to Tech</span>
+      {{ else if eq .Params.series "attackers-mindset" }}
+        <span class="series-pill series-pill--attack" style="margin-bottom:1rem; display:inline-flex;">🎯 Defending with an Attacker's Mindset</span>
+      {{ end }}
+    {{ end }}
+
+    <div class="post-meta">
+      {{ with .Date }}<span>{{ . | time.Format "2 January 2006" }}</span>{{ end }}
+      {{ with .Params.readtime }}<span>{{ . }}</span>{{ end }}
+    </div>
+
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="post-subtitle">{{ . }}</p>{{ end }}
+  </div>
+</div>
+
+<div class="container--narrow" style="padding-top: 2.5rem; padding-bottom: 5rem;">
+
+  <!-- Video embed (if YouTube ID provided) -->
+  {{ with .Params.youtube_id }}
+    <div class="video-embed">
+      <iframe
+        src="https://www.youtube.com/embed/{{ . }}"
+        title="{{ $.Title }}"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  {{ else }}
+    {{ with .Params.youtube_url }}
+      <div class="video-placeholder">
+        <div class="play-icon">▶</div>
+        <p style="font-family: var(--font-mono); color: var(--text-secondary); font-size:0.85rem;">Watch on YouTube</p>
+        <a href="{{ . }}" target="_blank" rel="noopener" class="btn btn--primary" style="display:inline-flex; margin-top:1rem;">Watch Video</a>
+      </div>
+    {{ end }}
+  {{ end }}
+
+  <!-- Post content -->
+  <div class="post-body">
+    {{ .Content }}
+  </div>
+
+  <hr class="divider">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    {{ with .PrevInSection }}
+      <a href="{{ .Permalink }}" class="btn btn--outline" style="font-size:0.75rem;">← {{ .Title }}</a>
+    {{ else }}<span></span>{{ end }}
+    {{ with .NextInSection }}
+      <a href="{{ .Permalink }}" class="btn btn--outline" style="font-size:0.75rem;">{{ .Title }} →</a>
+    {{ end }}
+  </div>
+
+</div>
+
+{{ end }}
