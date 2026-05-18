@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Explainer on Lee Renahan | Cyber Security Expert</title>
+    <link>http://localhost:1313/tags/explainer/</link>
+    <description>Recent content in Explainer on Lee Renahan | Cyber Security Expert</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 22 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/explainer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Shaken, Not Confused</title>
+      <link>http://localhost:1313/series/beer-drinkers-guide/shaken-not-confused-mcps/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/beer-drinkers-guide/shaken-not-confused-mcps/</guid>
+      <description>&lt;p&gt;You&amp;rsquo;ve been to the pub and got your head around LLMs. Now you&amp;rsquo;ve crossed the road to the upmarket bar — the kind with low lighting, a cocktail menu written in a font you can&amp;rsquo;t quite read, and a barman who takes his craft very seriously.&lt;/p&gt;&#xA;&lt;p&gt;The barman here has a different skill set and access to different resources. So instead of ordering a pint, you&amp;rsquo;re ordering a cocktail. And in doing so, you&amp;rsquo;ve accidentally stumbled into one of the most useful ways to understand how modern AI agents actually work.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Last Orders at the Language Model</title>
+      <link>http://localhost:1313/series/beer-drinkers-guide/last-orders-at-the-language-model/</link>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/beer-drinkers-guide/last-orders-at-the-language-model/</guid>
+      <description>&lt;p&gt;Ever wondered how a Large Language Model actually works? Not the marketing version — the real version. Grab a stool. We&amp;rsquo;re going to explain one of the most significant technologies of the past decade using beer. Obviously.&lt;/p&gt;&#xA;&lt;p&gt;When you type a prompt into an AI — something like &amp;ldquo;Write me a poem about ordering a beer&amp;rdquo; — you&amp;rsquo;re walking up to a bar and placing an order. You tell the bartender what you want. The bartender nods. And behind the scenes, the brewery kicks into action.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Is That Actually ABC Beer? SPF, DKIM &amp; DMARC — Explained Over a Pint</title>
+      <link>http://localhost:1313/series/beer-drinkers-guide/spf-dkim-dmarc/</link>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/beer-drinkers-guide/spf-dkim-dmarc/</guid>
+      <description>&lt;p&gt;You walk into a pub and spot a discount on your favourite beer. Brilliant. But before you dive in, a nagging question: is that actually ABC Lager in the glass, or has the landlord switched the kegs? Email works exactly the same way. And billions of fraudulent messages every day are banking on the fact that you won&amp;rsquo;t check.&lt;/p&gt;&#xA;&lt;p&gt;This post is about email authentication — specifically the trio of standards that let a recipient verify that a message really did come from who it claims. Those standards are &lt;strong&gt;SPF&lt;/strong&gt;, &lt;strong&gt;DKIM&lt;/strong&gt;, and &lt;strong&gt;DMARC&lt;/strong&gt;. We&amp;rsquo;re going to explain all three using the oldest analogy in the world: ordering a pint.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pints, Privacy &amp; Peach IPAs</title>
+      <link>http://localhost:1313/series/beer-drinkers-guide/beer-drinkers-guide-to-vpns/</link>
+      <pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/beer-drinkers-guide/beer-drinkers-guide-to-vpns/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Welcome to The Service Provider Arms — where every pint tells a story. Today&amp;rsquo;s tale? How VPNs work, told through the noble art of ordering beer.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;You might already know what a VPN is — a Virtual Private Network — but if someone asked you to explain it in plain English, you&amp;rsquo;d probably wave your hand vaguely at the air and say &amp;ldquo;something to do with privacy.&amp;rdquo; That&amp;rsquo;s fair. The technology is genuinely useful but routinely explained like a GCSE textbook. So let&amp;rsquo;s fix that.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pints, Packets &amp; Protocols</title>
+      <link>http://localhost:1313/series/beer-drinkers-guide/pints-packets-protocols/</link>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/beer-drinkers-guide/pints-packets-protocols/</guid>
+      <description>&lt;p&gt;You use the internet every day — but have you ever stopped to wonder what&amp;rsquo;s actually happening when you type a web address and hit Enter? Routers, DNS, TCP, IP addresses&amp;hellip; it can all sound pretty intimidating. So let&amp;rsquo;s forget the jargon for a moment and head to the pub instead.&lt;/p&gt;&#xA;&lt;p&gt;In this post we&amp;rsquo;re going to walk through how the internet works, using the world&amp;rsquo;s biggest bar as our guide. By the time you&amp;rsquo;ve finished reading, you&amp;rsquo;ll understand what happens every time you visit a website — and you might even be thirsty.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

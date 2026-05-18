@@ -1,0 +1,30 @@
+baseURL = "https://lrenahan.github.io/"
+languageCode = "en-gb"
+title = "Lee Renahan | Cyber Security Expert"
+theme = "cyberbar"
+paginate = 10
+
+[params]
+  author = "Lee Renahan"
+  tagline = "Cyber Security Expert. Author. Educator."
+  description = "Making cyber security make sense — for everyone."
+  linkedin = "www.linkedin.com/in/lee-renahan-76a2bb71"
+  youtube = "https://www.youtube.com/@leerenahan4043"
+
+[taxonomies]
+  tag = "tags"
+  series = "series"
+
+[menu]
+  [[menu.main]]
+    name = "Beer Drinker's Guide"
+    url = "/series/beer-drinkers-guide/"
+    weight = 1
+  [[menu.main]]
+    name = "Attacker's Mindset"
+    url = "/series/attackers-mindset/"
+    weight = 2
+  [[menu.main]]
+    name = "Books"
+    url = "/books/"
+    weight = 3

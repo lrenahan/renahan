@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Last Orders at the Language Model | Lee Renahan | Cyber Security Expert</title>
+  <meta name="description" content="How LLMs actually work — not the marketing version. Grab a stool, we&#39;re explaining one of the most significant technologies of the past decade using beer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body><nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="bracket">[</span>
+      Lee Renahan
+      <span class="bracket">]</span>
+    </a>
+    <ul class="nav-links">
+      
+        <li><a href="/series/beer-drinkers-guide/">Beer Drinker&#39;s Guide</a></li>
+      
+        <li><a href="/series/attackers-mindset/">Attacker&#39;s Mindset</a></li>
+      
+        <li><a href="/books/">Books</a></li>
+      
+    </ul>
+  </div>
+</nav>
+<main>
+
+<div class="post-header" style="background: var(--bg-surface); border-bottom: 1px solid var(--border);">
+  <div class="container--narrow">
+    
+      
+        <span class="series-pill series-pill--beer" style="margin-bottom:1rem; display:inline-flex;">🍺 Beer Drinker's Guide to Tech</span>
+      
+    
+
+    <div class="post-meta">
+      <span>15 May 2025</span>
+      <span>~8 min read</span>
+    </div>
+
+    <h1 class="post-title">Last Orders at the Language Model</h1>
+    <p class="post-subtitle">How LLMs actually work — not the marketing version. Grab a stool, we&#39;re explaining one of the most significant technologies of the past decade using beer.</p>
+  </div>
+</div>
+
+<div class="container--narrow" style="padding-top: 2.5rem; padding-bottom: 5rem;">
+
+  
+  
+    <div class="video-embed">
+      <iframe
+        src="https://www.youtube.com/embed/SUdRmuj3XVc"
+        title="Last Orders at the Language Model"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  
+
+  
+  <div class="post-body">
+    <p>Ever wondered how a Large Language Model actually works? Not the marketing version — the real version. Grab a stool. We&rsquo;re going to explain one of the most significant technologies of the past decade using beer. Obviously.</p>
+<p>When you type a prompt into an AI — something like &ldquo;Write me a poem about ordering a beer&rdquo; — you&rsquo;re walking up to a bar and placing an order. You tell the bartender what you want. The bartender nods. And behind the scenes, the brewery kicks into action.</p>
+<h2 id="before-any-beer-gets-poured-the-ingredients">Before Any Beer Gets Poured: The Ingredients</h2>
+<p>Before a brewery can make anything, it needs ingredients. Malt, hops, yeast, water — each one contributes something to the final product. Without them, there&rsquo;s nothing to brew with.</p>
+<p>For a Large Language Model, the ingredients are text. Enormous, almost incomprehensible quantities of it: books, articles, websites, conversations, code, academic papers, forum threads. The model doesn&rsquo;t memorise every sentence it encounters — that would be like a brewer trying to remember every individual hop pellet. Instead, it learns patterns. Which words tend to appear near which other words. How sentences are structured. What ideas are connected. Just like a brewer learns which hops create which flavours, the model learns which linguistic combinations create which meanings.</p>
+<blockquote>
+<p><em>An LLM doesn&rsquo;t know facts the way a textbook does. It knows patterns the way an expert brewer knows flavour — through exposure, repetition, and a lot of refinement.</em></p>
+</blockquote>
+<h2 id="crushing-the-grain-tokenisation">Crushing the Grain: Tokenisation</h2>
+<p>In the first stage of brewing, the grain gets crushed. This isn&rsquo;t about destruction — it&rsquo;s about preparation. Crushing exposes more surface area, making it easier for the water to extract the sugars needed for fermentation.</p>
+<p>In an LLM, the equivalent step is called <strong>tokenisation</strong>. Before the model can process any text, it chops it into small pieces called tokens. A token might be a whole word, a part of a word, a punctuation mark, or even a single character. The sentence &ldquo;Write me a poem about ordering a beer&rdquo; might become something like: <code>[Write] [me] [a] [poem] [about] [order] [ing] [a] [beer]</code>.</p>
+<p>Just like crushed grain is easier to brew with than whole barley, tokens make text easier for the model to work with. They&rsquo;re the raw material everything else is built from.</p>
+<blockquote>
+<p><em>Tokenisation is why LLMs occasionally stumble on unusual words or names — if a word gets split in an unexpected way, the model is working with unfamiliar grain.</em></p>
+</blockquote>
+<h2 id="the-flavour-profile-embeddings">The Flavour Profile: Embeddings</h2>
+<p>Once the grain is crushed, a brewer doesn&rsquo;t just see &ldquo;grain&rdquo; — they see a specific set of characteristics. This malt is nutty. That one&rsquo;s roasty. This one will give the beer a rich amber colour. Each ingredient has a flavour profile that describes what it brings to the mix.</p>
+<p>In an LLM, each token gets turned into an <strong>embedding</strong> — a kind of numerical flavour profile. Rather than storing a token as just a word, the model represents it as a long list of numbers that encode its meaning and its relationships to other words. The model learns that &ldquo;poem&rdquo; sits close to &ldquo;creative&rdquo;, &ldquo;verse&rdquo; and &ldquo;lyric&rdquo; in this numerical space. That &ldquo;order&rdquo; relates to bars, restaurants, and queues. That &ldquo;IPA&rdquo; is what people ask for when they want to look knowledgeable.</p>
+<p>These embeddings are crucial because they let the model understand not just what a word is, but what it means in context — and how it relates to everything else in the sentence.</p>
+<blockquote>
+<p><em>Two words can look completely different but have very similar embeddings if they mean similar things. &ldquo;Pub&rdquo; and &ldquo;bar&rdquo; end up very close together in embedding space. &ldquo;Pub&rdquo; and &ldquo;parliament&rdquo; — perhaps closer than you&rsquo;d hope.</em></p>
+</blockquote>
+<h2 id="paying-attention-the-transformers-attention-mechanism">Paying Attention: The Transformer&rsquo;s Attention Mechanism</h2>
+<p>A good brewer doesn&rsquo;t treat every ingredient equally. Some hops dominate the aroma. Some malts define the body. Knowing which ingredients matter most — and how they interact — is what separates a great brew from a mediocre one.</p>
+<p>In an LLM, this is handled by something called the <strong>attention mechanism</strong>, which sits at the heart of the transformer architecture that underpins most modern AI models. When processing a prompt, the model looks at all the tokens simultaneously and calculates which ones are most relevant to each other. In the sentence &ldquo;Write me a poem about ordering a beer&rdquo;, the word &ldquo;poem&rdquo; needs to pay a lot of attention to &ldquo;creative&rdquo; and &ldquo;write&rdquo; — and rather less attention to &ldquo;a&rdquo;.</p>
+<p>It&rsquo;s the bartender paying close attention to your actual drink order, rather than the extended personal backstory you felt the need to share first.</p>
+<blockquote>
+<p><em>Attention is what lets LLMs handle long, complex sentences without losing track of what&rsquo;s connected to what. It&rsquo;s the mechanism that makes context possible — and it&rsquo;s genuinely one of the most elegant ideas in modern computer science.</em></p>
+</blockquote>
+<h2 id="the-mash-tun-training-and-parameters">The Mash Tun: Training and Parameters</h2>
+<p>Now the real brewing begins. The mash tun is where the crushed grain and hot water combine, allowing enzymes to convert starches into sugars. Everything interacts. Flavours develop. The character of the beer starts to emerge.</p>
+<p>In an LLM, <strong>training</strong> is where everything comes together. The model processes billions of tokens, adjusting millions — sometimes hundreds of billions — of internal values called <strong>parameters</strong>. These aren&rsquo;t facts stored in a database. They&rsquo;re more like the precise settings on a vast mixing desk: each one slightly influencing how the model interprets language, how it weighs relationships between words, and how it generates responses.</p>
+<p>During training, the model makes predictions (&ldquo;what word comes next?&rdquo;), compares them to the actual answer, and adjusts its parameters to do slightly better next time. This happens billions of times across the training dataset. It&rsquo;s not memorising. It&rsquo;s learning relationships:</p>
+<ul>
+<li>which words tend to follow which others</li>
+<li>how sentences are structured across different styles and topics</li>
+<li>what ideas connect, contradict, or qualify each other</li>
+<li>and that &ldquo;hold my beer&rdquo; rarely ends well for anyone involved</li>
+</ul>
+<blockquote>
+<p><em>The parameters of a large model are the distilled result of processing more text than any human could read in a thousand lifetimes. They&rsquo;re not a knowledge base. They&rsquo;re a finely tuned intuition about language.</em></p>
+</blockquote>
+<h2 id="into-the-kegs-the-trained-model">Into the Kegs: The Trained Model</h2>
+<p>Once a beer is brewed, it goes into kegs and gets connected to the taps. The hard work is done. The flavours are set. When someone orders a pint, the bar doesn&rsquo;t re-brew the beer from scratch — it just pours from what&rsquo;s already been prepared.</p>
+<p>A trained LLM works the same way. Training happens once (or periodically, with updates). After that, the model&rsquo;s parameters are fixed. When you send it a prompt, it doesn&rsquo;t re-learn anything or re-read the internet. It just draws on what it already learned during training and uses that to generate a response.</p>
+<p>This is an important point that&rsquo;s often misunderstood: a standard LLM isn&rsquo;t searching for information in real time. It&rsquo;s pouring from a keg that was filled during training. Which is why models have knowledge cutoff dates — the keg was filled at a particular moment, and it doesn&rsquo;t automatically update.</p>
+<blockquote>
+<p><em>When an LLM gets something wrong about recent events, it&rsquo;s not being lazy. The keg was filled before that event happened. It&rsquo;s serving what it has.</em></p>
+</blockquote>
+<h2 id="the-pour-token-generation">The Pour: Token Generation</h2>
+<p>The bartender starts pouring. For an LLM, this is the <strong>generation</strong> step — and it&rsquo;s worth understanding exactly how it works, because it&rsquo;s quite different from how most people imagine it.</p>
+<p>The model doesn&rsquo;t compose an entire response and then deliver it. It predicts one token at a time. It looks at your prompt, predicts the most likely next token, adds that token to the context, and then predicts the next one. Then the next. Then the next. Each prediction is informed by everything that came before it — both your original prompt and all the tokens generated so far.</p>
+<p>Just like a smooth pour depends on pressure, angle, and the shape of the glass, the quality of the output depends on the model&rsquo;s training, the structure of the prompt, and a setting called <strong>temperature</strong> — which controls how much randomness is introduced into each token selection. Low temperature gives you predictable, conservative responses. High temperature gives you more creative, varied ones. Turn it up too far and the output starts to resemble a closing-time monologue from someone who&rsquo;s had too many.</p>
+<blockquote>
+<p><em>This is why LLMs sometimes trail off, repeat themselves, or take an unexpected turn mid-response. Each token is a fresh prediction. The model is always working from the edge of what&rsquo;s been said so far.</em></p>
+</blockquote>
+<h2 id="why-every-pint-pours-slightly-differently-probability">Why Every Pint Pours Slightly Differently: Probability</h2>
+<p>No two pints poured from the same keg are completely identical. The head varies. The pour angle matters. There&rsquo;s inherent variation in the process.</p>
+<p>LLMs work on <strong>probability</strong>. At each step, the model assigns a likelihood to every possible next token — and then selects from among the high-probability options, with some controlled randomness built in. This is why if you ask the same question twice, you&rsquo;ll often get subtly different answers. The keg is the same. The pour varies.</p>
+<p>It&rsquo;s also why the model genuinely doesn&rsquo;t know how a sentence will end when it starts generating it. It&rsquo;s not retrieving a pre-written answer. It&rsquo;s making a probabilistic decision, one token at a time, all the way to the final full stop. A bit like someone confidently beginning a story at last orders — utterly certain about the opening, considerably less certain about the ending.</p>
+<blockquote>
+<p><em>Probability is a feature, not a bug. It&rsquo;s what allows LLMs to be creative, varied, and contextually appropriate — rather than producing the same mechanical response every time.</em></p>
+</blockquote>
+<h2 id="how-big-is-the-glass-context-windows">How Big Is the Glass? Context Windows</h2>
+<p>Every glass has a limit. You can&rsquo;t pour an infinite amount of beer into a pint glass — at some point, it overflows and the floor gets involved.</p>
+<p>LLMs have a <strong>context window</strong>: a limit on how many tokens they can consider at once. Everything inside the window — your prompt, the conversation history, any documents you&rsquo;ve shared — is what the model can &ldquo;see&rdquo; when generating a response. Everything outside the window is, for the model&rsquo;s purposes, as if it never existed.</p>
+<p>Early models had small context windows — a few thousand tokens. Modern models can handle hundreds of thousands. But the principle is the same: the model is always working from a glass of fixed size, and if the conversation gets too long, the oldest parts start to overflow.</p>
+<blockquote>
+<p><em>Context windows explain why very long conversations with an AI can start to feel like it&rsquo;s forgotten what you discussed at the beginning. It hasn&rsquo;t become inattentive. The early parts of the conversation have simply fallen outside the glass.</em></p>
+</blockquote>
+<h2 id="a-seasonal-special-fine-tuning">A Seasonal Special: Fine-Tuning</h2>
+<p>A brewery&rsquo;s core lager might be the same year-round, but a good brewery also produces seasonal specials — takes on the base recipe adapted for a particular occasion, audience, or flavour profile. The brewing knowledge is the same. The output is tailored.</p>
+<p><strong>Fine-tuning</strong> works the same way. Once a base LLM is trained on a vast general dataset, it can be further trained on a smaller, more specific dataset to adapt its behaviour. A customer service chatbot, a coding assistant, a medical information tool — these are often fine-tuned versions of larger base models, trained to follow instructions, maintain a particular tone, or specialise in a particular domain.</p>
+<p>Fine-tuning doesn&rsquo;t change the underlying model entirely. It adjusts the pour — the same ingredients, brewed differently, for a specific purpose.</p>
+<blockquote>
+<p><em>When you notice that different AI products feel different even though they&rsquo;re built on the same underlying model, fine-tuning is usually the explanation. Same brewery, different recipe.</em></p>
+</blockquote>
+<h2 id="last-orders-what-we-covered">Last Orders: What We Covered</h2>
+<ul>
+<li>LLMs are trained on vast amounts of text — the ingredients of the brewery — learning patterns rather than memorising facts.</li>
+<li>Tokenisation chops text into small pieces, like crushing grain to prepare it for brewing.</li>
+<li>Embeddings give each token a numerical flavour profile, encoding meaning and relationships between words.</li>
+<li>The attention mechanism lets the model focus on what matters most in a prompt — like a bartender ignoring the backstory and focusing on the order.</li>
+<li>Training adjusts billions of parameters across the model — like calibrating a vast mixing desk until the output sounds right.</li>
+<li>The trained model is like a keg: filled once, ready to pour, not re-brewed with every request.</li>
+<li>Generation happens one token at a time, each predicted from what came before — a probabilistic pour, not a pre-written answer.</li>
+<li>Context windows set the limit on how much the model can see at once — a glass with a fixed capacity.</li>
+<li>Fine-tuning adapts a base model for a specific purpose — same brewery, seasonal recipe.</li>
+</ul>
+<hr>
+<p><em>Cheers — and see you in the next one.</em></p>
+
+  </div>
+
+  <hr class="divider">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <span></span>
+    
+  </div>
+
+</div>
+
+
+  </main><footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-copy">
+          &copy; 2026 Lee Renahan. All rights reserved.
+        </p>
+        <p class="footer-copy" style="margin-top:0.25rem;">
+          Cyber Security Expert &middot; Author &middot; Educator
+        </p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://www.youtube.com/@leerenahan4043" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="www.linkedin.com/in/lee-renahan-76a2bb71" target="_blank" rel="noopener">LinkedIn</a></li>
+        
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
