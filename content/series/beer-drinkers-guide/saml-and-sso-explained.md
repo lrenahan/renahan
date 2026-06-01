@@ -3,7 +3,7 @@ title: "Stamps, Wristbands & Single Sign-On"
 subtitle: "How SAML and SSO Work — Explained at the Door of Your Favourite Bar"
 description: "Show your ID once. Drink everywhere. We explain SAML and Single Sign-On using the best analogy we could think of — a night out at the pub."
 date: 2025-09-11
-series: "Tech Behind the Bar"
+series: "beer-drinkers-guide"
 tags: ["saml", "sso", "single-sign-on", "authentication", "cybersecurity", "2fa", "identity-provider", "explainer"]
 readTime: "8 min"
 youtube_id: "YfXr6ht3d14"
