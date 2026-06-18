@@ -3,7 +3,70 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/series/beer-drinkers-guide/</loc>
-    <lastmod>2025-05-22T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/bec/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cyber-security/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/dmarc/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/email-security/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/explainer/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/malware/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/series/beer-drinkers-guide/blog-passwords-vs-passkeys/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/phishing/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ransomware/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/series/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-06-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/series/beer-drinkers-guide/bdg-email-threats/</loc>
+    <lastmod>2026-05-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/2fa/</loc>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/authentication/</loc>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/cybersecurity/</loc>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/identity-provider/</loc>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/saml/</loc>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/single-sign-on/</loc>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/sso/</loc>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/series/beer-drinkers-guide/saml-and-sso-explained/</loc>
+    <lastmod>2025-09-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/agents/</loc>
     <lastmod>2025-05-22T00:00:00+00:00</lastmod>
@@ -11,22 +74,10 @@
     <loc>http://localhost:1313/tags/ai/</loc>
     <lastmod>2025-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/explainer/</loc>
-    <lastmod>2025-05-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-05-22T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/mcp/</loc>
     <lastmod>2025-05-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/</loc>
-    <lastmod>2025-05-22T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/series/beer-drinkers-guide/shaken-not-confused-mcps/</loc>
-    <lastmod>2025-05-22T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-05-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/series/beer-drinkers-guide/last-orders-at-the-language-model/</loc>
@@ -38,13 +89,7 @@
     <loc>http://localhost:1313/tags/machine-learning/</loc>
     <lastmod>2025-05-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/authentication/</loc>
-    <lastmod>2025-05-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/dkim/</loc>
-    <lastmod>2025-05-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/dmarc/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/email/</loc>
@@ -71,21 +116,6 @@
     <loc>http://localhost:1313/tags/vpn/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/attackers-mindset/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/series/attackers-mindset/html-smuggling/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/osint/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/reconnaissance/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/threat-intelligence/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/dns/</loc>
     <lastmod>2025-01-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -95,11 +125,23 @@
     <loc>http://localhost:1313/tags/tcp/</loc>
     <lastmod>2025-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/attackers-mindset/chrome-passwords/</loc>
-    <lastmod>2024-01-10T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/series/attackers-mindset/</loc>
+    <lastmod>2024-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/osint/</loc>
+    <lastmod>2024-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/reconnaissance/</loc>
+    <lastmod>2024-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/series/attackers-mindset/html-smuggling/</loc>
+    <lastmod>2024-04-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/threat-intelligence/</loc>
+    <lastmod>2024-04-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/series/attackers-mindset/hashcat/</loc>
-    <lastmod>2024-01-10T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/series/attackers-mindset/qr-meterpreter/</loc>
     <lastmod>2024-01-10T00:00:00+00:00</lastmod>
@@ -109,6 +151,13 @@
   </url><url>
     <loc>http://localhost:1313/series/attackers-mindset/evilginx/</loc>
     <lastmod>2023-09-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/series/attackers-mindset/chrome-passwords/</loc>
+    <lastmod>2023-09-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/beth/</loc>
+  </url><url>
+    <loc>http://localhost:1313/zach/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/</loc>
   </url><url>
