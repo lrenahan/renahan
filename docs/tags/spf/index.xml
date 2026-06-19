@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spf on Lee Renahan | Cyber Security Expert</title>
+    <link>http://localhost:1313/tags/spf/</link>
+    <description>Recent content in Spf on Lee Renahan | Cyber Security Expert</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 01 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/spf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Is That Actually ABC Beer? SPF, DKIM &amp; DMARC — Explained Over a Pint</title>
+      <link>http://localhost:1313/series/beer-drinkers-guide/spf-dkim-dmarc/</link>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/beer-drinkers-guide/spf-dkim-dmarc/</guid>
+      <description>&lt;p&gt;You walk into a pub and spot a discount on your favourite beer. Brilliant. But before you dive in, a nagging question: is that actually ABC Lager in the glass, or has the landlord switched the kegs? Email works exactly the same way. And billions of fraudulent messages every day are banking on the fact that you won&amp;rsquo;t check.&lt;/p&gt;&#xA;&lt;p&gt;This post is about email authentication — specifically the trio of standards that let a recipient verify that a message really did come from who it claims. Those standards are &lt;strong&gt;SPF&lt;/strong&gt;, &lt;strong&gt;DKIM&lt;/strong&gt;, and &lt;strong&gt;DMARC&lt;/strong&gt;. We&amp;rsquo;re going to explain all three using the oldest analogy in the world: ordering a pint.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
