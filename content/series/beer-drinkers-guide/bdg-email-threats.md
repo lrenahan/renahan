@@ -1,7 +1,7 @@
 ---
 title: "The Beer Drinker's Guide to Email Threats"
 description: "Phishing, malware, invoice fraud, BEC and more — explained using pub analogies, with the technical detail the video couldn't fit."
-date: 2026-05-29
+date: 2026-06-19
 series: "beer-drinkers-guide"
 readtime: "~12 min read"
 tags: ["cyber security", "email security", "phishing", "malware", "explainer", "DMARC", "ransomware", "BEC"]

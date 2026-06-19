@@ -5,7 +5,7 @@ description: "Show your ID once. Drink everywhere. We explain SAML and Single Si
 date: 2025-09-11
 series: "beer-drinkers-guide"
 tags: ["saml", "sso", "single-sign-on", "authentication", "cybersecurity", "2fa", "identity-provider", "explainer"]
-readTime: "8 min"
+readtime: "8 min"
 youtube_id: "YfXr6ht3d14"
 youtube_url: "https://www.youtube.com/watch?v=YfXr6ht3d14"
 ---

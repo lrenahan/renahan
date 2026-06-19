@@ -1,7 +1,7 @@
 ---
 title: "Passwords vs Passkeys: Which is actually more secure when ordering a beer?"
 description: "For decades, the password has been the gatekeeper of your digital life. And it's rubbish."
-date: 2026-06-10
+date: 2026-06-19
 series: "beer-drinkers-guide"
 readtime: "~10 min read"
 tags: ["cyber security", "email security", "phishing", "malware", "explainer", "DMARC", "ransomware", "BEC"]
