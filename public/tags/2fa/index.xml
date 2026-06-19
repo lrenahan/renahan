@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2fa on Lee Renahan | Cyber Security Expert</title>
+    <link>http://localhost:1313/tags/2fa/</link>
+    <description>Recent content in 2fa on Lee Renahan | Cyber Security Expert</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 11 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/2fa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stamps, Wristbands &amp; Single Sign-On</title>
+      <link>http://localhost:1313/series/beer-drinkers-guide/saml-and-sso-explained/</link>
+      <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/beer-drinkers-guide/saml-and-sso-explained/</guid>
+      <description>&lt;p&gt;&lt;em&gt;How SAML and SSO Work — Explained at the Door of Your Favourite Bar&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Series: Tech Behind the Bar | Read time: ~8 minutes&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s your birthday. You&amp;rsquo;re finally old enough to walk through that door, and you&amp;rsquo;ve been looking forward to it for a while. But first, you&amp;rsquo;ve got to get past the bouncer.&lt;/p&gt;&#xA;&lt;p&gt;You&amp;rsquo;ve got your ID. The bouncer checks it, nods, and stamps your hand. From that point on, no one inside the bar asks who you are — the stamp says it all.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

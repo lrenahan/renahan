@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>A Beer Drinker&#39;s Guide to Tech on Lee Renahan | Cyber Security Expert</title>
+    <link>http://localhost:1313/series/beer-drinkers-guide/</link>
+    <description>Recent content in A Beer Drinker&#39;s Guide to Tech on Lee Renahan | Cyber Security Expert</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 10 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/series/beer-drinkers-guide/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Passwords vs Passkeys: Which is actually more secure when ordering a beer?</title>
+      <link>http://localhost:1313/series/beer-drinkers-guide/blog-passwords-vs-passkeys/</link>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/beer-drinkers-guide/blog-passwords-vs-passkeys/</guid>
+      <description>&lt;h1 id=&#34;passwords-vs-passkeys&#34;&gt;Passwords vs Passkeys&lt;/h1&gt;&#xA;&lt;h2 id=&#34;why-the-system-youve-used-for-30-years-is-fundamentally-broken--and-whats-replacing-it&#34;&gt;Why the System You&amp;rsquo;ve Used for 30 Years Is Fundamentally Broken — and What&amp;rsquo;s Replacing It&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;Series: The Beer Drinker&amp;rsquo;s Guide to Not Getting Hacked | Read time: ~10 minutes&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;You&amp;rsquo;ve been whispering secrets to strangers for most of your digital life. That&amp;rsquo;s essentially what a password is. And while &amp;ldquo;The-badger-flies-at-midnight&amp;rdquo; might &lt;em&gt;feel&lt;/em&gt; secure, the problem isn&amp;rsquo;t the password itself — it&amp;rsquo;s the entire model behind it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Beer Drinker&#39;s Guide to Email Threats</title>
+      <link>http://localhost:1313/series/beer-drinkers-guide/bdg-email-threats/</link>
+      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/beer-drinkers-guide/bdg-email-threats/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Read time: ~12 minutes | Series: Tech Behind the Bar&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Your inbox is basically a dodgy pub.&lt;/p&gt;&#xA;&lt;p&gt;A cosy, familiar place where you just want a quiet pint and maybe a packet of crisps. But instead, it&amp;rsquo;s full of strangers trying to sell you things, steal your things, or convince you to do something catastrophically stupid.&lt;/p&gt;&#xA;&lt;p&gt;The video covers the pub analogies. This post goes a layer deeper — keeping the same metaphors but pulling back the curtain on how these attacks actually work, why they&amp;rsquo;re so effective, and what&amp;rsquo;s happening technically when someone falls for one. Think of it as the extended cut, with footnotes.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stamps, Wristbands &amp; Single Sign-On</title>
+      <link>http://localhost:1313/series/beer-drinkers-guide/saml-and-sso-explained/</link>
+      <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/beer-drinkers-guide/saml-and-sso-explained/</guid>
+      <description>&lt;p&gt;&lt;em&gt;How SAML and SSO Work — Explained at the Door of Your Favourite Bar&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Series: Tech Behind the Bar | Read time: ~8 minutes&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;It&amp;rsquo;s your birthday. You&amp;rsquo;re finally old enough to walk through that door, and you&amp;rsquo;ve been looking forward to it for a while. But first, you&amp;rsquo;ve got to get past the bouncer.&lt;/p&gt;&#xA;&lt;p&gt;You&amp;rsquo;ve got your ID. The bouncer checks it, nods, and stamps your hand. From that point on, no one inside the bar asks who you are — the stamp says it all.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Shaken, Not Confused</title>
+      <link>http://localhost:1313/series/beer-drinkers-guide/shaken-not-confused-mcps/</link>
+      <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/beer-drinkers-guide/shaken-not-confused-mcps/</guid>
+      <description>&lt;p&gt;You&amp;rsquo;ve been to the pub and got your head around LLMs. Now you&amp;rsquo;ve crossed the road to the upmarket bar — the kind with low lighting, a cocktail menu written in a font you can&amp;rsquo;t quite read, and a barman who takes his craft very seriously.&lt;/p&gt;&#xA;&lt;p&gt;The barman here has a different skill set and access to different resources. So instead of ordering a pint, you&amp;rsquo;re ordering a cocktail. And in doing so, you&amp;rsquo;ve accidentally stumbled into one of the most useful ways to understand how modern AI agents actually work.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Last Orders at the Language Model</title>
+      <link>http://localhost:1313/series/beer-drinkers-guide/last-orders-at-the-language-model/</link>
+      <pubDate>Thu, 15 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/beer-drinkers-guide/last-orders-at-the-language-model/</guid>
+      <description>&lt;p&gt;Ever wondered how a Large Language Model actually works? Not the marketing version — the real version. Grab a stool. We&amp;rsquo;re going to explain one of the most significant technologies of the past decade using beer. Obviously.&lt;/p&gt;&#xA;&lt;p&gt;When you type a prompt into an AI — something like &amp;ldquo;Write me a poem about ordering a beer&amp;rdquo; — you&amp;rsquo;re walking up to a bar and placing an order. You tell the bartender what you want. The bartender nods. And behind the scenes, the brewery kicks into action.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Is That Actually ABC Beer? SPF, DKIM &amp; DMARC — Explained Over a Pint</title>
+      <link>http://localhost:1313/series/beer-drinkers-guide/spf-dkim-dmarc/</link>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/beer-drinkers-guide/spf-dkim-dmarc/</guid>
+      <description>&lt;p&gt;You walk into a pub and spot a discount on your favourite beer. Brilliant. But before you dive in, a nagging question: is that actually ABC Lager in the glass, or has the landlord switched the kegs? Email works exactly the same way. And billions of fraudulent messages every day are banking on the fact that you won&amp;rsquo;t check.&lt;/p&gt;&#xA;&lt;p&gt;This post is about email authentication — specifically the trio of standards that let a recipient verify that a message really did come from who it claims. Those standards are &lt;strong&gt;SPF&lt;/strong&gt;, &lt;strong&gt;DKIM&lt;/strong&gt;, and &lt;strong&gt;DMARC&lt;/strong&gt;. We&amp;rsquo;re going to explain all three using the oldest analogy in the world: ordering a pint.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pints, Privacy &amp; Peach IPAs</title>
+      <link>http://localhost:1313/series/beer-drinkers-guide/beer-drinkers-guide-to-vpns/</link>
+      <pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/beer-drinkers-guide/beer-drinkers-guide-to-vpns/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Welcome to The Service Provider Arms — where every pint tells a story. Today&amp;rsquo;s tale? How VPNs work, told through the noble art of ordering beer.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;You might already know what a VPN is — a Virtual Private Network — but if someone asked you to explain it in plain English, you&amp;rsquo;d probably wave your hand vaguely at the air and say &amp;ldquo;something to do with privacy.&amp;rdquo; That&amp;rsquo;s fair. The technology is genuinely useful but routinely explained like a GCSE textbook. So let&amp;rsquo;s fix that.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pints, Packets &amp; Protocols</title>
+      <link>http://localhost:1313/series/beer-drinkers-guide/pints-packets-protocols/</link>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/beer-drinkers-guide/pints-packets-protocols/</guid>
+      <description>&lt;p&gt;You use the internet every day — but have you ever stopped to wonder what&amp;rsquo;s actually happening when you type a web address and hit Enter? Routers, DNS, TCP, IP addresses&amp;hellip; it can all sound pretty intimidating. So let&amp;rsquo;s forget the jargon for a moment and head to the pub instead.&lt;/p&gt;&#xA;&lt;p&gt;In this post we&amp;rsquo;re going to walk through how the internet works, using the world&amp;rsquo;s biggest bar as our guide. By the time you&amp;rsquo;ve finished reading, you&amp;rsquo;ll understand what happens every time you visit a website — and you might even be thirsty.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
