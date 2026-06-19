@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beth&#39;s Snake Game | Lee Renahan | Cyber Security Expert</title>
+  <title>Zach&#39;s Snake Game | Lee Renahan | Cyber Security Expert</title>
   <meta name="description" content="Making cyber security make sense — for everyone." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,7 +38,7 @@
       
     </div>
 
-    <h1 class="post-title">Beth&#39;s Snake Game</h1>
+    <h1 class="post-title">Zach&#39;s Snake Game</h1>
     
   </div>
 </div>
@@ -57,7 +57,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beth's Snake 🐍</title>
+  <title>Zach's Snake 🐍</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -146,13 +146,13 @@
 </head>
 <body>
 
-<h1>🐍 Beth's Snake 🐍</h1>
+<h1>🐍 Zach's Snake 🐍</h1>
 <div id="score-display">SCORE: <span id="score">0</span> &nbsp;|&nbsp; BEST: <span id="best">0</span></div>
 
 <div id="game-wrapper">
   <canvas id="gameCanvas" width="480" height="480"></canvas>
   <div id="overlay">
-    <h2 id="overlay-title">Beth's Snake</h2>
+    <h2 id="overlay-title">Zach's Snake</h2>
     <p id="overlay-msg">Use arrow keys or WASD to move</p>
     <button id="overlay-btn" onclick="startGame()">▶ Play</button>
   </div>
@@ -174,7 +174,7 @@
 
   let snake, dir, nextDir, food, score, best = 0, gameLoop, zachImg, zachLoaded = false;
 
-  // Load Beth's face image
+  // Load Zach's face image
   zachImg = new Image();
   zachImg.onload = () => { zachLoaded = true; };
   zachImg.src = '/images/zach.png';
@@ -272,7 +272,7 @@
       ctx.fill();
     }
 
-    // Snake head — Beth's face
+    // Snake head — Zach's face
     const head = snake[0];
     const hx = head.x * CELL;
     const hy = head.y * CELL;
@@ -352,7 +352,7 @@
   <div style="display: flex; justify-content: space-between; align-items: center;">
     <span></span>
     
-      <a href="http://localhost:1313/beth/" class="btn btn--outline" style="font-size:0.75rem;">Beth&#39;s Snake Game →</a>
+      <a href="http://localhost:1313/Zach/" class="btn btn--outline" style="font-size:0.75rem;">Zach&#39;s Snake Game →</a>
     
   </div>
 
