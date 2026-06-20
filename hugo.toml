@@ -8,7 +8,7 @@ paginate = 10
   author = "Lee Renahan"
   tagline = "Cyber Security Expert. Author. Educator."
   description = "Making cyber security make sense — for everyone."
-  linkedin = "www.linkedin.com/in/lee-renahan-76a2bb71"
+  linkedin = "https://www.linkedin.com/in/lee-renahan-76a2bb71"
   youtube = "https://www.youtube.com/@leerenahan4043"
 
 [taxonomies]
