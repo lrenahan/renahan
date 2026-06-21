@@ -5,16 +5,25 @@
     <loc>http://localhost:1313/series/beer-drinkers-guide/</loc>
     <lastmod>2026-06-19T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/anonymity/</loc>
+    <lastmod>2026-06-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/bec/</loc>
     <lastmod>2026-06-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/cyber-security/</loc>
     <lastmod>2026-06-19T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/dark-web/</loc>
+    <lastmod>2026-06-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/dmarc/</loc>
     <lastmod>2026-06-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/email-security/</loc>
+    <lastmod>2026-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/encryption/</loc>
     <lastmod>2026-06-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/explainer/</loc>
@@ -26,10 +35,16 @@
     <loc>http://localhost:1313/tags/malware/</loc>
     <lastmod>2026-06-19T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/onion-routing/</loc>
+    <lastmod>2026-06-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/series/beer-drinkers-guide/blog-passwords-vs-passkeys/</loc>
     <lastmod>2026-06-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/phishing/</loc>
+    <lastmod>2026-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/privacy/</loc>
     <lastmod>2026-06-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ransomware/</loc>
@@ -42,6 +57,12 @@
     <lastmod>2026-06-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/series/beer-drinkers-guide/bdg-email-threats/</loc>
+    <lastmod>2026-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/tor/</loc>
+    <lastmod>2026-06-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/series/beer-drinkers-guide/tunnels-nodes-onion-addresses/</loc>
     <lastmod>2026-06-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/2fa/</loc>
@@ -101,16 +122,10 @@
     <loc>http://localhost:1313/tags/spf/</loc>
     <lastmod>2025-05-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/encryption/</loc>
-    <lastmod>2025-04-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/networking/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/series/beer-drinkers-guide/beer-drinkers-guide-to-vpns/</loc>
-    <lastmod>2025-04-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/privacy/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/vpn/</loc>
