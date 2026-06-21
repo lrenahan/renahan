@@ -1,5 +1,5 @@
 ---
-title: "Beth's Snake Game"
+title: "Zach's Snake Game"
 layout: "raw"
 ---
 <!DOCTYPE html>
@@ -7,7 +7,7 @@ layout: "raw"
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beth's Snake 🐍</title>
+  <title>Zach's Snake 🐍</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -132,14 +132,14 @@ layout: "raw"
 </head>
 <body>
 
-<h1>🐍 Beth's Snake 🐍</h1>
+<h1>🐍 Zach's Snake 🐍</h1>
 <div id="score-display">SCORE: <span id="score">0</span> &nbsp;|&nbsp; BEST: <span id="best">0</span></div>
 
 <div id="game-wrapper">
   <canvas id="gameCanvas" width="480" height="480"></canvas>
   <div id="overlay">
-    <img id="overlay-face" src="/images/zach.png" alt="Beth">
-    <h2 id="overlay-title">Beth's Snake</h2>
+    <img id="overlay-face" src="/images/zach.png" alt="Zach">
+    <h2 id="overlay-title">Zach's Snake</h2>
     <p id="overlay-msg">Use the arrow buttons to move</p>
     <button id="overlay-btn" onclick="startGame()">▶ Play</button>
   </div>
@@ -253,7 +253,7 @@ layout: "raw"
       ctx.fill();
     }
 
-    // Snake head — Beth's face
+    // Snake head — Zach's face
     const head = snake[0];
     ctx.save();
     ctx.translate(head.x * CELL + CELL/2, head.y * CELL + CELL/2);
