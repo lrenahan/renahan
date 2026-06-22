@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dns on Lee Renahan | Cyber Security Expert</title>
-    <link>http://localhost:1313/tags/dns/</link>
+    <link>https://lrenahan.github.io/tags/dns/</link>
     <description>Recent content in Dns on Lee Renahan | Cyber Security Expert</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <lastBuildDate>Wed, 15 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lrenahan.github.io/tags/dns/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pints, Packets &amp; Protocols</title>
-      <link>http://localhost:1313/series/beer-drinkers-guide/pints-packets-protocols/</link>
+      <link>https://lrenahan.github.io/series/beer-drinkers-guide/pints-packets-protocols/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/series/beer-drinkers-guide/pints-packets-protocols/</guid>
+      <guid>https://lrenahan.github.io/series/beer-drinkers-guide/pints-packets-protocols/</guid>
       <description>&lt;p&gt;You use the internet every day — but have you ever stopped to wonder what&amp;rsquo;s actually happening when you type a web address and hit Enter? Routers, DNS, TCP, IP addresses&amp;hellip; it can all sound pretty intimidating. So let&amp;rsquo;s forget the jargon for a moment and head to the pub instead.&lt;/p&gt;&#xA;&lt;p&gt;In this post we&amp;rsquo;re going to walk through how the internet works, using the world&amp;rsquo;s biggest bar as our guide. By the time you&amp;rsquo;ve finished reading, you&amp;rsquo;ll understand what happens every time you visit a website — and you might even be thirsty.&lt;/p&gt;</description>
     </item>
   </channel>

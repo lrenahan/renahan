@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Email Security on Lee Renahan | Cyber Security Expert</title>
-    <link>http://localhost:1313/tags/email-security/</link>
+    <link>https://lrenahan.github.io/tags/email-security/</link>
     <description>Recent content in Email Security on Lee Renahan | Cyber Security Expert</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <lastBuildDate>Fri, 19 Jun 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/email-security/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://lrenahan.github.io/tags/email-security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Passwords vs Passkeys: Which is actually more secure when ordering a beer?</title>
-      <link>http://localhost:1313/series/beer-drinkers-guide/blog-passwords-vs-passkeys/</link>
+      <link>https://lrenahan.github.io/series/beer-drinkers-guide/blog-passwords-vs-passkeys/</link>
       <pubDate>Fri, 19 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/series/beer-drinkers-guide/blog-passwords-vs-passkeys/</guid>
+      <guid>https://lrenahan.github.io/series/beer-drinkers-guide/blog-passwords-vs-passkeys/</guid>
       <description>&lt;h1 id=&#34;passwords-vs-passkeys&#34;&gt;Passwords vs Passkeys&lt;/h1&gt;&#xA;&lt;h2 id=&#34;why-the-system-youve-used-for-30-years-is-fundamentally-broken--and-whats-replacing-it&#34;&gt;Why the System You&amp;rsquo;ve Used for 30 Years Is Fundamentally Broken — and What&amp;rsquo;s Replacing It&lt;/h2&gt;&#xA;&lt;p&gt;&lt;em&gt;Series: The Beer Drinker&amp;rsquo;s Guide to Not Getting Hacked | Read time: ~10 minutes&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;You&amp;rsquo;ve been whispering secrets to strangers for most of your digital life. That&amp;rsquo;s essentially what a password is. And while &amp;ldquo;The-badger-flies-at-midnight&amp;rdquo; might &lt;em&gt;feel&lt;/em&gt; secure, the problem isn&amp;rsquo;t the password itself — it&amp;rsquo;s the entire model behind it.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Beer Drinker&#39;s Guide to Email Threats</title>
-      <link>http://localhost:1313/series/beer-drinkers-guide/bdg-email-threats/</link>
+      <link>https://lrenahan.github.io/series/beer-drinkers-guide/bdg-email-threats/</link>
       <pubDate>Fri, 19 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/series/beer-drinkers-guide/bdg-email-threats/</guid>
+      <guid>https://lrenahan.github.io/series/beer-drinkers-guide/bdg-email-threats/</guid>
       <description>&lt;p&gt;&lt;em&gt;Read time: ~12 minutes | Series: Tech Behind the Bar&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Your inbox is basically a dodgy pub.&lt;/p&gt;&#xA;&lt;p&gt;A cosy, familiar place where you just want a quiet pint and maybe a packet of crisps. But instead, it&amp;rsquo;s full of strangers trying to sell you things, steal your things, or convince you to do something catastrophically stupid.&lt;/p&gt;&#xA;&lt;p&gt;The video covers the pub analogies. This post goes a layer deeper — keeping the same metaphors but pulling back the curtain on how these attacks actually work, why they&amp;rsquo;re so effective, and what&amp;rsquo;s happening technically when someone falls for one. Think of it as the extended cut, with footnotes.&lt;/p&gt;</description>
     </item>
   </channel>
