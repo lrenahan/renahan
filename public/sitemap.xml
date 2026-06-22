@@ -172,10 +172,10 @@
   </url><url>
     <loc>http://localhost:1313/beth/</loc>
   </url><url>
-    <loc>http://localhost:1313/zach/</loc>
-  </url><url>
     <loc>http://localhost:1313/blog/</loc>
   </url><url>
     <loc>http://localhost:1313/books/</loc>
+  </url><url>
+    <loc>http://localhost:1313/zach/</loc>
   </url>
 </urlset>
