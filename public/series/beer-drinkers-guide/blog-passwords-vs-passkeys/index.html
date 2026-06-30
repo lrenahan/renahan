@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Passwords vs Passkeys: Which is actually more secure when ordering a beer? | Lee Renahan | Cyber Security Expert</title>
+  <meta name="description" content="For decades, the password has been the gatekeeper of your digital life. And it&#39;s rubbish." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body><nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="bracket">[</span>
+      Lee Renahan
+      <span class="bracket">]</span>
+    </a>
+    <ul class="nav-links">
+      
+        <li><a href="/series/beer-drinkers-guide/">Beer Drinker&#39;s Guide</a></li>
+      
+        <li><a href="/series/attackers-mindset/">Attacker&#39;s Mindset</a></li>
+      
+        <li><a href="/books/">Books</a></li>
+      
+    </ul>
+  </div>
+</nav>
+<main>
+
+<div class="post-header" style="background: var(--bg-surface); border-bottom: 1px solid var(--border);">
+  <div class="container--narrow">
+    
+      
+        <span class="series-pill series-pill--beer" style="margin-bottom:1rem; display:inline-flex;">🍺 Beer Drinker's Guide to Tech</span>
+      
+    
+
+    <div class="post-meta">
+      <span>19 June 2026</span>
+      <span>~10 min read</span>
+    </div>
+
+    <h1 class="post-title">Passwords vs Passkeys: Which is actually more secure when ordering a beer?</h1>
+    <p class="post-subtitle">For decades, the password has been the gatekeeper of your digital life. And it&#39;s rubbish.</p>
+  </div>
+</div>
+
+<div class="container--narrow" style="padding-top: 2.5rem; padding-bottom: 5rem;">
+
+  
+  
+    <div class="video-embed">
+      <iframe
+        src="https://www.youtube.com/embed/Rvsxdt4UeB0"
+        title="Passwords vs Passkeys: Which is actually more secure when ordering a beer?"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  
+
+  
+  <div class="post-body">
+    <h1 id="passwords-vs-passkeys">Passwords vs Passkeys</h1>
+<h2 id="why-the-system-youve-used-for-30-years-is-fundamentally-broken--and-whats-replacing-it">Why the System You&rsquo;ve Used for 30 Years Is Fundamentally Broken — and What&rsquo;s Replacing It</h2>
+<p><em>Series: The Beer Drinker&rsquo;s Guide to Not Getting Hacked | Read time: ~10 minutes</em></p>
+<p>You&rsquo;ve been whispering secrets to strangers for most of your digital life. That&rsquo;s essentially what a password is. And while &ldquo;The-badger-flies-at-midnight&rdquo; might <em>feel</em> secure, the problem isn&rsquo;t the password itself — it&rsquo;s the entire model behind it.</p>
+<p>Let&rsquo;s talk about why, and what passkeys actually do differently under the bonnet.</p>
+<hr>
+<h2 id="the-password-problem-is-architectural-not-behavioural">The Password Problem Is Architectural, Not Behavioural</h2>
+<p>Before we get to passkeys, it&rsquo;s worth understanding exactly <em>where</em> the password system breaks down — because it&rsquo;s not just that people choose bad ones.</p>
+<p><strong>The shared-secret model</strong> is the fundamental issue. When you create a password, you and the server both need to know it. That means the server has to store something derived from your password (usually a hashed version), and you have to <em>transmit</em> it during login. That transmission and that stored hash are both attack surfaces.</p>
+<p>Here&rsquo;s what can go wrong at each stage:</p>
+<p><strong>At rest (server-side):</strong> Servers store passwords as hashes — typically bcrypt, Argon2, or scrypt. If the database is breached, attackers get those hashes. For weak passwords, they can crack them with rainbow tables or brute force. Good hashing buys time; it doesn&rsquo;t eliminate the risk.</p>
+<p><strong>In transit:</strong> Even over HTTPS, your password moves from your device to the server. If you&rsquo;re on a compromised network, or if a bug in TLS implementation exists, that transmission is potentially visible.</p>
+<p><strong>At the human layer:</strong> You. You reuse passwords. You write them down. You fall for phishing. This isn&rsquo;t a character flaw — it&rsquo;s the inevitable result of asking a human brain to manage dozens of unique 20-character random strings. It&rsquo;s like designing a car that only works safely if the driver is also a Formula 1 pilot.</p>
+<hr>
+<h2 id="enter-phishing--the-attack-that-still-works-on-everyone">Enter Phishing — the Attack That Still Works on Everyone</h2>
+<p>Phishing remains the most successful attack vector in the world, and the password model is almost perfectly suited to it.</p>
+<p>The attack is simple: build a website that looks like your bank, send someone a convincing email, and wait for them to type their password into your fake form. Your server receives the credential. You now own that account.</p>
+<p>No amount of password complexity helps here. A 50-character random password typed into a fake site is just as useful to an attacker as &ldquo;password123&rdquo;. The issue isn&rsquo;t strength — it&rsquo;s that passwords are <em>knowledge-based credentials</em>, and knowledge can be shared, copied, or stolen from anyone.</p>
+<hr>
+<h2 id="how-passkeys-actually-work">How Passkeys Actually Work</h2>
+<p>Passkeys solve this at a cryptographic level, not a behavioural one. They&rsquo;re built on a standard called <strong>FIDO2</strong> (Fast Identity Online), developed by the FIDO Alliance — a consortium including Google, Apple, Microsoft, and others.</p>
+<p>The mechanism is <strong>asymmetric (public-key) cryptography</strong>. Here&rsquo;s the technical walkthrough:</p>
+<h3 id="registration">Registration</h3>
+<p>When you set up a passkey on a site:</p>
+<ol>
+<li>
+<p>Your device generates a <strong>key pair</strong> — a mathematically linked pair of numbers:</p>
+<ul>
+<li>A <strong>public key</strong>, which is sent to and stored by the website.</li>
+<li>A <strong>private key</strong>, which never leaves your device. Ever.</li>
+</ul>
+</li>
+<li>
+<p>The private key is stored in a <strong>Trusted Platform Module (TPM)</strong> or <strong>Secure Enclave</strong> — dedicated hardware chips (like Apple&rsquo;s T2/M-series chips or Android&rsquo;s StrongBox) specifically designed so the key can be <em>used</em> but never <em>extracted</em>.</p>
+</li>
+<li>
+<p>The public key is useless on its own. Think of it as an open padlock — anyone can see it, but only your private key can close and open it.</p>
+</li>
+</ol>
+<h3 id="authentication">Authentication</h3>
+<p>When you log in:</p>
+<ol>
+<li>The website sends a <strong>cryptographic challenge</strong> — a random nonce (a one-time-use random number).</li>
+<li>Your device uses the private key to <strong>digitally sign</strong> that challenge. This produces a signature that can <em>only</em> have been created by your specific private key.</li>
+<li>The website verifies the signature using your stored public key.</li>
+</ol>
+<p>You never transmit your secret. The website never receives anything sensitive. The private key never moves.</p>
+<h3 id="why-this-eliminates-phishing">Why This Eliminates Phishing</h3>
+<p>Here&rsquo;s the elegant part: the signing process is <strong>origin-bound</strong>. Your device only uses the passkey if the domain matches the one it was registered for.</p>
+<p>A fake <code>bаrcIays.com</code> (with a Cyrillic &lsquo;а&rsquo;) gets nothing — your authenticator checks the actual domain and simply refuses to sign for an impersonator. The credential is cryptographically bound to the real site. Phishing Phil is unemployed.</p>
+<hr>
+<h2 id="biometrics-the-gatekeeper-not-the-key">Biometrics: The Gatekeeper, Not the Key</h2>
+<p>There&rsquo;s a common misconception worth clearing up: when you use Face ID or a fingerprint to authenticate with a passkey, your biometric data is <strong>not sent to the website</strong>. At all.</p>
+<p>What&rsquo;s happening is a <em>local unlock</em>:</p>
+<ol>
+<li>You present your face or fingerprint to your device.</li>
+<li>The device checks you are <em>you</em> — locally, on-chip.</li>
+<li>Having confirmed your identity, it unlocks the private key and performs the signing operation.</li>
+</ol>
+<p>The website only ever sees a cryptographic signature. Your fingerprint never leaves your phone. The FIDO2 standard explicitly separates <em>device unlock</em> (biometric or PIN) from <em>authentication</em> (the public-key challenge-response). These are two different operations.</p>
+<hr>
+<h2 id="synced-vs-device-bound-passkeys">Synced vs Device-Bound Passkeys</h2>
+<p>There are two flavours of passkeys, and the distinction matters:</p>
+<p><strong>Synced passkeys</strong> (what Apple Keychain, Google Password Manager, and 1Password implement) are encrypted and synced across your devices via the cloud. This trades a small theoretical security reduction for massive usability gains — you don&rsquo;t lose access if you lose your phone. The private key is encrypted before it leaves your device, so the cloud provider can&rsquo;t read it.</p>
+<p><strong>Device-bound passkeys</strong> (used in high-security contexts, hardware security keys like YubiKey) never leave the physical hardware. Losing the device means losing the passkey. Used for things like privileged access management, government systems, and where the security-usability tradeoff tilts firmly toward security.</p>
+<p>For most people, synced passkeys are the right choice — they eliminate the primary risk (phishing, credential stuffing) while remaining practical.</p>
+<hr>
+<h2 id="what-about-credential-stuffing">What About Credential Stuffing?</h2>
+<p>One of the most damaging attacks today is <strong>credential stuffing</strong>: attackers take a leaked database of email/password pairs (billions are freely available on the dark web) and try them against every major website, because most people reuse passwords.</p>
+<p>Passkeys eliminate this entirely. There&rsquo;s nothing to stuff. Every passkey is a unique cryptographic key pair generated per site. Breaching one site&rsquo;s database exposes only public keys — which are, by design, public. They&rsquo;re useless to an attacker.</p>
+<hr>
+<h2 id="why-hasnt-this-happened-sooner">Why Hasn&rsquo;t This Happened Sooner?</h2>
+<p>FIDO2 and WebAuthn (its web API) have been around since 2018. The slow adoption comes down to a few factors:</p>
+<p><strong>Ecosystem fragmentation</strong> — until Apple, Google, and Microsoft all implemented synced passkeys (which happened between 2022 and 2023), you&rsquo;d lose access to all your passkeys if you switched platforms. That&rsquo;s now largely solved.</p>
+<p><strong>Account recovery complexity</strong> — the password reset flow (forgot password → email link → new password) doesn&rsquo;t map onto passkeys. Sites need to rebuild their recovery flows, which is engineering work.</p>
+<p><strong>Inertia</strong> — passwords are deeply embedded in identity systems, auditing requirements, and enterprise tooling. Replacing them is a multi-year infrastructure project for most organisations.</p>
+<hr>
+<h2 id="the-pub-analogy-properly-technical">The Pub Analogy, Properly Technical</h2>
+<p>Since we started in the pub: the password model is like every customer whispering a secret phrase to the barman, who writes them all down in a ledger. If the ledger is stolen, every customer is compromised. If Phil builds a fake bar and asks for your phrase, you&rsquo;ll probably give it to him.</p>
+<p>Passkeys are like giving every customer a personal stamp — a unique signet ring. The bar knows what your stamp impression looks like (public key), but not the ring itself (private key). To verify you, they hand you a lump of wax (the challenge) and ask you to stamp it. They check the impression against their records. Phil can build a perfect replica of the bar, but when he hands you the wax, your ring refuses to stamp it — it knows he&rsquo;s not the real bar.</p>
+<p>The ring never leaves your pocket. Phil never gets an impression he can copy. The ledger, if stolen, is useless — it only contains stamp impressions, not the rings themselves.</p>
+<hr>
+<h2 id="last-orders-what-to-actually-do">Last Orders: What to Actually Do</h2>
+<p>If your device supports passkeys (iOS 16+, Android 9+, Windows 10+, macOS Ventura+), most major sites now support them — Google, Apple, Microsoft, GitHub, PayPal, Shopify, and many others.</p>
+<p><strong>To enable passkeys:</strong> look for a &ldquo;Security&rdquo; or &ldquo;Sign-in methods&rdquo; section in your account settings on any supported site. Add a passkey. Your device will handle the rest.</p>
+<p>For sites that still require passwords, use a password manager. Unique, random passwords for everything — let the software do the remembering.</p>
+<p>The password had a good run. It&rsquo;s time to let it retire.</p>
+<p><em>Cheers — and see you in the next one.</em></p>
+<hr>
+<p><em>The Beer Drinker&rsquo;s Guide to Not Getting Hacked is a video series explaining digital security without the jargon.</em></p>
+
+  </div>
+
+  <hr class="divider">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <span></span>
+    
+  </div>
+
+</div>
+
+
+  </main><footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-copy">
+          &copy; 2026 Lee Renahan. All rights reserved.
+        </p>
+        <p class="footer-copy" style="margin-top:0.25rem;">
+          Cyber Security Expert &middot; Author &middot; Educator
+        </p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://www.youtube.com/@leerenahan4043" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.linkedin.com/in/lee-renahan-76a2bb71" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

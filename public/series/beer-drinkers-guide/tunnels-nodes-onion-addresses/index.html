@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tunnels, Nodes &amp; .onion Addresses: How Tor and the Dark Web Actually Work | Lee Renahan | Cyber Security Expert</title>
+  <meta name="description" content="Strip away the sensationalism and Tor is a piece of sophisticated engineering. Here&#39;s how the cryptography, circuits, and hidden services actually work — technically." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body><nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="bracket">[</span>
+      Lee Renahan
+      <span class="bracket">]</span>
+    </a>
+    <ul class="nav-links">
+      
+        <li><a href="/series/beer-drinkers-guide/">Beer Drinker&#39;s Guide</a></li>
+      
+        <li><a href="/series/attackers-mindset/">Attacker&#39;s Mindset</a></li>
+      
+        <li><a href="/books/">Books</a></li>
+      
+    </ul>
+  </div>
+</nav>
+<main>
+
+<div class="post-header" style="background: var(--bg-surface); border-bottom: 1px solid var(--border);">
+  <div class="container--narrow">
+    
+      
+        <span class="series-pill series-pill--beer" style="margin-bottom:1rem; display:inline-flex;">🍺 Beer Drinker's Guide to Tech</span>
+      
+    
+
+    <div class="post-meta">
+      <span>19 June 2026</span>
+      <span>~12 min read</span>
+    </div>
+
+    <h1 class="post-title">Tunnels, Nodes &amp; .onion Addresses: How Tor and the Dark Web Actually Work</h1>
+    <p class="post-subtitle">Strip away the sensationalism and Tor is a piece of sophisticated engineering. Here&#39;s how the cryptography, circuits, and hidden services actually work — technically.</p>
+  </div>
+</div>
+
+<div class="container--narrow" style="padding-top: 2.5rem; padding-bottom: 5rem;">
+
+  
+  
+    
+  
+
+  
+  <div class="post-body">
+    <p><em>Read time: ~12 minutes | Series: Tech Behind the Bar</em></p>
+<p>You&rsquo;ve heard the term dark web thrown around in news reports, crime dramas and breathless YouTube thumbnails. It&rsquo;s usually preceded by something ominous and followed by something sensational. But strip away the theatre and what you&rsquo;re actually dealing with is a piece of sophisticated engineering — one designed not for villainy, but for privacy.</p>
+<p>In the Pints, Packets &amp; Protocols series, we&rsquo;ve already walked through how the standard internet works: DNS lookups, routers, TCP, HTTP, and the rest. This post goes deeper — much deeper. We&rsquo;re heading down into the cellar.</p>
+<hr>
+<h2 id="-first-what-the-dark-web-actually-is">🗺️ First: What the &lsquo;Dark Web&rsquo; Actually Is</h2>
+<p>The internet has three loosely defined layers, and they&rsquo;re frequently confused:</p>
+<ul>
+<li><strong>The Surface Web</strong> — everything indexed by search engines like Google. If you can find it with a search, it lives here. This represents only a small fraction of what&rsquo;s actually online.</li>
+<li><strong>The Deep Web</strong> — content not indexed by search engines: your online banking portal, private company intranets, academic databases behind paywalls, email inboxes. Totally mundane, totally legal. The vast majority of web content lives here.</li>
+<li><strong>The Dark Web</strong> — a small subset of the deep web that is intentionally hidden and requires specific software to access. This is what we&rsquo;re talking about today.</li>
+</ul>
+<p>The dark web isn&rsquo;t a physical place. There&rsquo;s no secret server room humming away somewhere underneath the internet. It&rsquo;s a collection of websites running on <strong>overlay networks</strong> — networks built on top of the standard internet infrastructure but designed to be difficult to monitor or trace. The most well-known of these overlay networks is Tor.</p>
+<hr>
+<h2 id="-the-onion-router-a-technical-deep-dive">🧅 The Onion Router: A Technical Deep Dive</h2>
+<p>Tor stands for <strong>The Onion Router</strong>. It was originally developed in the mid-1990s by the United States Naval Research Laboratory as a way to protect American intelligence communications online. The concept was published in 1997 by mathematicians Paul Syverson and Michael Reed, and the first public alpha version launched in 2002. It&rsquo;s now maintained by the non-profit Tor Project.</p>
+<p>The key idea is <strong>layered encryption</strong> — hence the onion metaphor. When you send data through the standard internet, your IP address travels with every request. Anyone monitoring network traffic — your ISP, a government agency, the website itself — can see where data is coming from and where it&rsquo;s going. Tor eliminates this by routing your traffic through a chain of volunteer-operated computers called <strong>nodes</strong> or <strong>relays</strong>, encrypting it at each step.</p>
+<hr>
+<h2 id="-the-circuit-how-a-tor-connection-is-built">🔌 The Circuit: How a Tor Connection Is Built</h2>
+<p>Before any data is transmitted, the Tor client on your machine builds what&rsquo;s called a <strong>circuit</strong> — a pre-negotiated path through the Tor network consisting of exactly three relays.</p>
+<p>Your Tor client first contacts a <strong>directory authority</strong>: a trusted server that maintains a list of all currently active Tor relays. There are nine of these authorities in total, hardcoded into the Tor software. From this list, your client selects three relays at random, biased towards nodes with higher bandwidth, better uptime, and geographically diverse locations.</p>
+<p>Once chosen, your client performs a <strong>key exchange</strong> with each relay using a protocol based on <strong>Diffie-Hellman key exchange</strong> — the process by which two parties agree on a shared encryption key over a public channel without anyone eavesdropping being able to determine what that key is. A cornerstone of modern cryptography.</p>
+<blockquote>
+<p>The circuit is negotiated incrementally: your client talks to the guard node, extends the circuit to the middle node through the guard, then extends again to the exit node through the middle. At no point does any relay learn the identities of all three nodes in the circuit.</p>
+</blockquote>
+<hr>
+<h2 id="-the-three-relays-what-each-one-knows">🔍 The Three Relays: What Each One Knows</h2>
+<p>Understanding the role of each relay is central to understanding why Tor provides anonymity. The model works because each relay is kept deliberately ignorant of the full picture.</p>
+<h3 id="1-the-guard-node-entry-node">1. The Guard Node (Entry Node)</h3>
+<p>The guard node is the first relay in your circuit — and the only node that knows your real IP address, because your traffic has to originate somewhere. However, the guard node does <strong>not</strong> know your destination. All it can see is that it&rsquo;s received encrypted traffic from you and needs to forward it to the middle node.</p>
+<p>Your Tor client encrypts your data in three nested layers before it leaves your machine. Think of it as sealing a letter inside three envelopes, each addressed only to the next stop. The guard node peels off the outermost envelope — revealing only the address of the middle node, and an encrypted payload it cannot read.</p>
+<p>To mitigate the risk of a malicious guard node, the Tor client uses <strong>Guard Pinning</strong>: instead of choosing a random guard relay every session, Tor keeps the same guard node for weeks or months. This reduces the chance of eventually being assigned a compromised node.</p>
+<h3 id="2-the-middle-node-relay-node">2. The Middle Node (Relay Node)</h3>
+<p>The middle relay is the node with the least information of all. It receives traffic from the guard node and forwards it to the exit node — but it doesn&rsquo;t know the origin of the data (your real IP was stripped by the guard), and it doesn&rsquo;t know the final destination (still encrypted).</p>
+<p>The middle node is also the lowest-risk position to run as a volunteer. Because it never communicates directly with the destination website, its IP address doesn&rsquo;t appear in the logs of the site being visited.</p>
+<h3 id="3-the-exit-node">3. The Exit Node</h3>
+<p>The exit node is where your traffic leaves the Tor network and enters the regular internet. It peels off the final layer of encryption and forwards your request to the destination server. From the destination&rsquo;s perspective, traffic is coming from the exit node&rsquo;s IP address — not yours.</p>
+<p>This is the most sensitive position in the circuit. The exit node can, in principle, read your traffic if it isn&rsquo;t encrypted with HTTPS — which is why using Tor over HTTP is strongly discouraged. If you&rsquo;re accessing a site over HTTPS, the exit node sees only that an encrypted request was made to a particular domain, not the content of that request.</p>
+<blockquote>
+<p><strong>Guard node:</strong> knows who you are, not where you&rsquo;re going. <strong>Middle node:</strong> knows neither. <strong>Exit node:</strong> knows where you&rsquo;re going, not who you are. No single relay holds the complete picture.</p>
+</blockquote>
+<hr>
+<h2 id="-the-encryption-three-layers-removed-in-order">🔐 The Encryption: Three Layers, Removed in Order</h2>
+<p>When your Tor client constructs a circuit, it performs a separate key exchange with each of the three relays, giving it three distinct encryption keys — one shared with the guard, one with the middle node, one with the exit.</p>
+<p>When you send data, your client encrypts it three times: first with the exit node&rsquo;s key, then the middle node&rsquo;s, then the guard&rsquo;s. This creates the nested structure that gives onion routing its name.</p>
+<ul>
+<li>The <strong>guard node</strong> decrypts the outermost layer, revealing the middle node&rsquo;s address and still-encrypted data. It forwards this on.</li>
+<li>The <strong>middle node</strong> decrypts its layer, revealing the exit node&rsquo;s address and still-encrypted data. It forwards this on.</li>
+<li>The <strong>exit node</strong> decrypts the final layer and sends the request — plaintext or HTTPS-encrypted — to its destination.</li>
+</ul>
+<p>On the return journey, the process reverses. Each relay adds its layer of encryption as data travels back toward you; your Tor client strips each layer in reverse order.</p>
+<p>The cryptography itself uses a combination of <strong>asymmetric cryptography</strong> (RSA or elliptic curve algorithms for the initial key exchange) and <strong>symmetric cryptography</strong> (AES-128 in counter mode for actual data transfer). Symmetric encryption handles bulk data because it&rsquo;s far faster; asymmetric is used only to establish the shared keys securely.</p>
+<hr>
+<h2 id="-onion-addresses-hidden-services">🧅 .onion Addresses: Hidden Services</h2>
+<p>So far we&rsquo;ve described how Tor anonymises the client. But Tor also provides a mechanism for <strong>servers</strong> to hide their location: <strong>Hidden Services</strong>, accessed via .onion addresses.</p>
+<p>A .onion address looks like this: <code>expyuzz4wqqyqhjn.onion</code> — a seemingly random string of characters followed by the .onion top-level domain. These aren&rsquo;t registered with any DNS authority. They&rsquo;re <strong>self-certifying</strong>: the address is mathematically derived from the server&rsquo;s public key. If you can connect to a .onion address, you&rsquo;ve cryptographically verified you&rsquo;re talking to the server holding that private key — no certificate authority required.</p>
+<p>Here&rsquo;s how a Hidden Service works technically:</p>
+<ol>
+<li>The hidden server generates an asymmetric key pair. The public key is hashed to produce the .onion address.</li>
+<li>The server picks a set of <strong>Introduction Points</strong> — regular Tor relays it registers with the Tor network&rsquo;s distributed hash table.</li>
+<li>When a client wants to connect, their Tor client fetches the introduction point information, picks a <strong>rendezvous point</strong> (another relay), and sends a message to the hidden server via an introduction point, proposing the rendezvous relay.</li>
+<li>The hidden server builds its own circuit to the rendezvous relay, completing the connection. End-to-end encryption is established, and neither party reveals their IP address to the other.</li>
+</ol>
+<blockquote>
+<p>A .onion address isn&rsquo;t a domain registered with anyone. It&rsquo;s a cryptographic fingerprint. If you reach the address, you&rsquo;ve verified the server&rsquo;s identity without trusting a third party.</p>
+</blockquote>
+<hr>
+<h2 id="-version-2-vs-version-3-onion-addresses">🆚 Version 2 vs Version 3 .onion Addresses</h2>
+<p>Older Hidden Services used <strong>v2 addresses</strong>: 16 characters derived from an 80-bit hash of an RSA-1024 public key. These have been officially deprecated and are no longer supported in current Tor clients, due to increasing viability of attacks against RSA-1024 and the SHA-1 hash function.</p>
+<p>Current Hidden Services use <strong>v3 addresses</strong>: 56 characters derived from an <strong>Ed25519</strong> public key using <strong>SHA-3</strong> hashing. The longer address reflects the larger key and stronger cryptographic primitive. V3 addresses also include a version number and checksum within the address itself, making them self-validating.</p>
+<hr>
+<h2 id="-tors-limitations-and-attack-vectors">⚠️ Tor&rsquo;s Limitations and Attack Vectors</h2>
+<p>Tor provides strong anonymity against a passive adversary who doesn&rsquo;t control a significant portion of the network. It does not provide perfect anonymity against all threat models.</p>
+<p><strong>Traffic Correlation Attacks</strong></p>
+<p>The most theoretically dangerous attack is traffic correlation: if an adversary controls both the network link you use to enter Tor and the exit node — or can observe both ends of a circuit simultaneously — they can potentially correlate the timing and volume of traffic to link a user to a destination, even without breaking the encryption. The Tor Project acknowledges this limitation; Tor does not protect against a sufficiently powerful global adversary capable of monitoring large portions of the internet simultaneously.</p>
+<p><strong>Malicious Relays</strong></p>
+<p>Anyone can run a Tor relay, which creates a supply chain trust problem. Researchers have periodically identified clusters of malicious relays designed to deanonymise traffic, inject malicious content, or harvest data through unencrypted exit node connections. Guard pinning and universal use of HTTPS significantly reduce exposure.</p>
+<p><strong>Browser Fingerprinting and Operational Security</strong></p>
+<p>Tor protects your IP address. It does not protect against <strong>browser fingerprinting</strong> — identifying users by the unique combination of browser version, installed fonts, screen resolution, time zone, and dozens of other attributes websites can query via JavaScript.</p>
+<p>The Tor Browser addresses this by standardising as many of these attributes as possible — all Tor Browser users present the same window size, user agent string, and JavaScript settings. But if a user logs into an account, enables JavaScript on a fingerprinting site, or downloads and opens a file while Tor is running, their real identity can be compromised regardless of the network-level protection.</p>
+<p>Law enforcement has historically been more successful at deanonymising dark web users through <strong>operational security (OPSEC) failures</strong> than through breaking Tor&rsquo;s cryptography.</p>
+<p><strong>Exit Node Traffic Visibility</strong></p>
+<p>Exit nodes can read unencrypted traffic. This isn&rsquo;t a flaw — it&rsquo;s an inherent consequence of the design. Tor provides anonymity, not confidentiality of content. The two are separate properties, and HTTPS provides the latter. Using Tor without HTTPS is roughly equivalent to asking your neighbours to post a letter for you without sealing the envelope.</p>
+<hr>
+<h2 id="-who-uses-tor--and-why-it-matters">👥 Who Uses Tor — and Why It Matters</h2>
+<p>The dark web&rsquo;s reputation as a marketplace for illegal activity is not without basis — there are indeed such marketplaces, and law enforcement agencies regularly investigate and dismantle them. But framing Tor through this lens alone would be like characterising all telephony as a tool for fraud because some criminals use phones.</p>
+<p>The Tor Project&rsquo;s own data suggests a significant majority of Tor users are in countries with restrictive internet censorship — accessing blocked news sites, using services unavailable in their region, or communicating in ways their governments don&rsquo;t permit. Journalists in authoritarian states use Tor to communicate with sources. Whistleblowers use <strong>SecureDrop</strong> — a platform that runs as a Tor Hidden Service — to send documents to newsrooms without revealing their identity. Domestic abuse survivors use it to research their situations without leaving a browsing trail.</p>
+<p>The cryptographic architecture doesn&rsquo;t distinguish between these use cases. Tor anonymises all traffic equally. Whether that&rsquo;s a feature or a problem depends entirely on who&rsquo;s asking — and from which side of which political context.</p>
+<hr>
+<h2 id="last-orders">Last Orders</h2>
+<ul>
+<li><strong>The dark web</strong> is a subset of the deep web, accessible via overlay networks like Tor — not a separate physical infrastructure</li>
+<li><strong>Tor</strong> routes traffic through three relays — guard, middle, and exit — wrapping data in three layers of encryption that each relay peels in sequence</li>
+<li><strong>The guard node</strong> knows your IP but not your destination; <strong>the middle node</strong> knows neither; <strong>the exit node</strong> knows the destination but not your IP</li>
+<li><strong>Key exchanges</strong> use asymmetric cryptography (RSA or Ed25519) to establish shared keys; bulk data is encrypted with AES-128 in counter mode</li>
+<li><strong>.onion Hidden Services</strong> allow servers to conceal their location using introduction points and rendezvous relays, with the address derived directly from the server&rsquo;s public key</li>
+<li><strong>V3 .onion addresses</strong> use Ed25519 keys and SHA-3 hashing, replacing the deprecated v2 RSA-1024/SHA-1 standard</li>
+<li><strong>Tor does not protect</strong> against traffic correlation attacks, malicious relays, browser fingerprinting, or operational security failures</li>
+<li><strong>Legitimate uses</strong> are widespread: circumventing censorship, whistleblowing, investigative journalism, and protecting privacy in high-risk environments</li>
+</ul>
+<p>The system was designed for anonymity. It achieves it — within limits. Understanding those limits is as important as understanding the mechanism.</p>
+<p><em>Cheers — and see you in the next one.</em> 🍺</p>
+<hr>
+<p><em>Missed the previous instalment? Read <a href="/posts/pints-packets-protocols/">Pints, Packets &amp; Protocols: How the Internet Works</a>.</em></p>
+
+  </div>
+
+  <hr class="divider">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <span></span>
+    
+  </div>
+
+</div>
+
+
+  </main><footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-copy">
+          &copy; 2026 Lee Renahan. All rights reserved.
+        </p>
+        <p class="footer-copy" style="margin-top:0.25rem;">
+          Cyber Security Expert &middot; Author &middot; Educator
+        </p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://www.youtube.com/@leerenahan4043" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.linkedin.com/in/lee-renahan-76a2bb71" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pints, Packets &amp; Protocols | Lee Renahan | Cyber Security Expert</title>
+  <meta name="description" content="How the internet works — explained over a beer. If you&#39;ve ever wondered what actually happens when you type a web address and hit Enter, this one&#39;s for you." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body><nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="bracket">[</span>
+      Lee Renahan
+      <span class="bracket">]</span>
+    </a>
+    <ul class="nav-links">
+      
+        <li><a href="/series/beer-drinkers-guide/">Beer Drinker&#39;s Guide</a></li>
+      
+        <li><a href="/series/attackers-mindset/">Attacker&#39;s Mindset</a></li>
+      
+        <li><a href="/books/">Books</a></li>
+      
+    </ul>
+  </div>
+</nav>
+<main>
+
+<div class="post-header" style="background: var(--bg-surface); border-bottom: 1px solid var(--border);">
+  <div class="container--narrow">
+    
+      
+        <span class="series-pill series-pill--beer" style="margin-bottom:1rem; display:inline-flex;">🍺 Beer Drinker's Guide to Tech</span>
+      
+    
+
+    <div class="post-meta">
+      <span>15 January 2025</span>
+      <span>~9 min read</span>
+    </div>
+
+    <h1 class="post-title">Pints, Packets &amp; Protocols</h1>
+    <p class="post-subtitle">How the internet works — explained over a beer. If you&#39;ve ever wondered what actually happens when you type a web address and hit Enter, this one&#39;s for you.</p>
+  </div>
+</div>
+
+<div class="container--narrow" style="padding-top: 2.5rem; padding-bottom: 5rem;">
+
+  
+  
+    <div class="video-embed">
+      <iframe
+        src="https://www.youtube.com/embed/WMdVQsisIQg"
+        title="Pints, Packets &amp; Protocols"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  
+
+  
+  <div class="post-body">
+    <p>You use the internet every day — but have you ever stopped to wonder what&rsquo;s actually happening when you type a web address and hit Enter? Routers, DNS, TCP, IP addresses&hellip; it can all sound pretty intimidating. So let&rsquo;s forget the jargon for a moment and head to the pub instead.</p>
+<p>In this post we&rsquo;re going to walk through how the internet works, using the world&rsquo;s biggest bar as our guide. By the time you&rsquo;ve finished reading, you&rsquo;ll understand what happens every time you visit a website — and you might even be thirsty.</p>
+<h2 id="a-town-full-of-connected-buildings">A Town Full of Connected Buildings</h2>
+<p>The word &ldquo;internet&rdquo; is short for interconnected network. Think of it like the streets, roads and motorways that connect people with shops, services and each other. In a town, people can send letters, pop to the shops, or grab a takeaway — all because buildings are physically connected by roads, and everyone follows shared rules: a common language, a recognised currency, and a unique address for every property.</p>
+<p>In the digital world, we use the same ideas:</p>
+<ul>
+<li><strong>Buildings and homes</strong> are called nodes — your laptop, your phone, web servers, all nodes.</li>
+<li><strong>The shared language</strong> is called a protocol — the agreed set of rules devices use to talk to each other.</li>
+<li><strong>Every node has a unique address</strong> — called an IP address — more on those shortly.</li>
+</ul>
+<p>Services like email, online banking and multiplayer games all live on this same network of connected nodes. The most familiar example? Visiting a webpage. And that&rsquo;s exactly where our bar comes in.</p>
+<h2 id="every-glass-has-a-serial-number-mac-addresses">Every Glass Has a Serial Number: MAC Addresses</h2>
+<p>Before we even think about routing drinks around the bar, there&rsquo;s something worth knowing about the glassware. Every single glass — in every bar in the world — has a unique serial number etched into it at the factory. No two glasses share the same number, ever. This is its hardware identity, fixed from the moment it was made.</p>
+<p>In networking, this is called a <strong>MAC address</strong> — short for Media Access Control address. Every network device (your laptop&rsquo;s Wi-Fi card, your phone, your smart TV) has a MAC address permanently assigned by the manufacturer. While IP addresses are like your seat in the bar tonight — they can change depending on where you are — a MAC address is more like a fingerprint. It&rsquo;s used for communication within your local network, rather than across the wider internet.</p>
+<blockquote>
+<p><em>Think of an IP address as where you&rsquo;re sitting in the bar tonight, and a MAC address as who you are — the name on your driving licence that never changes, no matter which pub you&rsquo;re in.</em></p>
+</blockquote>
+<h2 id="welcome-to-the-worlds-biggest-bar-dns">Welcome to the World&rsquo;s Biggest Bar: DNS</h2>
+<p>The internet hosts over a billion websites, though only around 200 million are actively maintained. Our bar isn&rsquo;t quite that big — but let&rsquo;s imagine it stocks one million different types of beer.</p>
+<p>With a million beers on tap, the barman can&rsquo;t memorise where every single one is located. So he keeps a directory. You order a pint of ABC Lager, he looks it up, and the directory says: Section 1, Row 3, Column 8.</p>
+<p>On the internet, this directory is called the <strong>Domain Name System</strong>, or DNS.</p>
+<blockquote>
+<p><em>DNS translates a human-readable web address — like <a href="https://www.example.com">www.example.com</a> — into a machine-readable IP address, like 93.184.216.34. That number is the actual location of the website on the internet.</em></p>
+</blockquote>
+<h2 id="the-bar-manager-and-the-floor-staff-routers-and-switches">The Bar Manager and the Floor Staff: Routers and Switches</h2>
+<p>Now the barman knows which beer to pour and roughly where to deliver it — but in a bar this size, getting drinks to the right place is a job in itself. This is where the bar manager and the floor staff come in.</p>
+<p>The floor staff — <strong>switches</strong> — operate within a defined section. A switch knows every table in its zone, and if a drink is destined for table 14 in Zone B, it gets it there directly and efficiently.</p>
+<p>The bar manager — the <strong>router</strong> — has a bigger picture view. When a drink needs to travel between zones, or leave the building entirely for delivery elsewhere in town, that&rsquo;s the router&rsquo;s job.</p>
+<blockquote>
+<p><em>Switches connect devices within the same network. Routers connect different networks together — and decide the smartest route for your data to take.</em></p>
+</blockquote>
+<h2 id="on-the-door-firewalls">On the Door: Firewalls</h2>
+<p>Our bar is popular. And like any popular venue, it needs a bouncer.</p>
+<p>The bouncer stands at the entrance and checks everyone coming in — and sometimes controls who&rsquo;s allowed to leave too. He works from a list of rules: regulars are waved through, troublemakers are turned away, and anyone acting suspiciously gets a closer look.</p>
+<p>A <strong>firewall</strong> works in exactly the same way. It sits at the boundary of a network and inspects incoming and outgoing traffic based on a defined set of rules.</p>
+<blockquote>
+<p><em>A firewall doesn&rsquo;t read the contents of your data — it checks who&rsquo;s sending it, where it&rsquo;s going, and whether that matches the house rules.</em></p>
+</blockquote>
+<h2 id="one-tab-for-the-whole-table-nat">One Tab for the Whole Table: NAT</h2>
+<p>Here&rsquo;s something that might surprise you: most devices in your home don&rsquo;t have their own public IP address. They share one — the address assigned to your router by your internet provider.</p>
+<p>Imagine a group of friends running a single tab. From the bar&rsquo;s perspective there&rsquo;s one account — one name, one address. But the person running the tab knows internally who ordered what, and makes sure each drink reaches the right person. This system is called <strong>NAT</strong> — Network Address Translation.</p>
+<blockquote>
+<p><em>NAT allows dozens of devices in your home to share a single public IP address, with your router acting as the translator between the outside world and your internal network.</em></p>
+</blockquote>
+<h2 id="pulling-the-pint-how-a-webpage-is-delivered">Pulling the Pint: How a Webpage is Delivered</h2>
+<p>When you visit a site, your browser sends an <strong>HTTP GET request</strong> to the server holding the website files. Those files were assembled using a mix of ingredients:</p>
+<ul>
+<li><strong>HTML</strong> — the structure of the page, like the glass that holds everything together.</li>
+<li><strong>CSS</strong> — the styling: fonts, colours, layout.</li>
+<li><strong>Images and scripts</strong> — the flavour and character of the page.</li>
+</ul>
+<p>If the website is secure — which it should be — it uses <strong>HTTPS</strong> instead of HTTP. The &lsquo;S&rsquo; stands for Secure, and it means data is encrypted in transit using Transport Layer Security (TLS). Think of it as a sealed, tamper-proof container for your pint.</p>
+<blockquote>
+<p><em>Rather than arriving all at once, websites are delivered in packets — tiny chunks of data sent one at a time, like delivering your beer teaspoon by teaspoon until the glass is full.</em></p>
+</blockquote>
+<h2 id="the-satellite-bar-caching-and-cdns">The Satellite Bar: Caching and CDNs</h2>
+<p>Our world&rsquo;s biggest bar has a problem: it&rsquo;s in one location, and some customers are a very long way away. The solution? Open satellite bars in every city, pre-stocked with the most popular drinks.</p>
+<p>This is exactly how a <strong>Content Delivery Network</strong> — or CDN — works. Instead of every request travelling to one central server, CDNs store copies of popular content on servers dotted around the globe.</p>
+<p><strong>Caching</strong> takes this idea further. Your browser can remember drinks it&rsquo;s already fetched — storing local copies of images, scripts and stylesheets so it doesn&rsquo;t have to request them on your next visit.</p>
+<blockquote>
+<p><em>CDNs reduce the distance data has to travel. Caching reduces how often it needs to travel at all. Together, they&rsquo;re why popular websites load almost instantly, wherever you are in the world.</em></p>
+</blockquote>
+<h2 id="rush-hour-at-the-bar-load-balancing">Rush Hour at the Bar: Load Balancing</h2>
+<p>Friday night. The bar is heaving. One barman simply can&rsquo;t keep up. The solution is obvious: bring in more bar staff and share the work between them.</p>
+<p><strong>Load balancing</strong> works on exactly the same principle. When a popular website receives millions of simultaneous requests, a single server would buckle. Instead, a load balancer sits in front of a pool of servers and distributes incoming requests across them.</p>
+<h2 id="finding-your-table-ip-addresses-and-binary">Finding Your Table: IP Addresses and Binary</h2>
+<p>An IPv4 address consists of four numbers between 0 and 255, separated by dots — something like <code>192.168.1.1</code>. Each number is called an octet, defined by 8 binary digits.</p>
+<p>To show how it works, imagine our mixologist has lined up 8 spirits — each one is either in your cocktail or it isn&rsquo;t. The spirits have values ascending from right to left: 1, 2, 4, 8, 16, 32, 64, 128. Their combinations produce any number from 0 to 255. With four octets and just 32 binary digits, you can represent over 4.2 billion unique addresses.</p>
+<blockquote>
+<p><em>With 8 billion people on the planet, that pool is running dry. The industry is moving to IPv6, which uses 128 binary digits and an almost incomprehensibly large number of addresses. A story for another video.</em></p>
+</blockquote>
+<h2 id="speed-vs-capacity-latency-and-bandwidth">Speed vs. Capacity: Latency and Bandwidth</h2>
+<p>Two things determine how quickly your beer arrives:</p>
+<p><strong>Latency</strong> is the delay — the time it takes for a single request to travel from your device to a server and back. It&rsquo;s measured in milliseconds and is heavily influenced by physical distance.</p>
+<p><strong>Bandwidth</strong> is about capacity — how much data can flow through a connection simultaneously. A high-bandwidth connection is like a barman with a huge tray: he might take the same time to walk over, but he&rsquo;s bringing you twelve drinks in one go.</p>
+<blockquote>
+<p><em>Latency is how fast. Bandwidth is how much. For a great internet experience, you want both to be good.</em></p>
+</blockquote>
+<h2 id="no-spillages-tcp-keeps-things-intact">No Spillages: TCP Keeps Things Intact</h2>
+<p>On the internet, <strong>TCP</strong> — Transmission Control Protocol — works alongside HTTP to ensure every packet of data making up a webpage arrives safely and in the right order. If any packet goes missing, TCP has built-in mechanisms to request a resend. No lost data, no broken pages, no half-poured pints.</p>
+<hr>
+<p><em>Cheers — and see you in the next one.</em></p>
+
+  </div>
+
+  <hr class="divider">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <span></span>
+    
+  </div>
+
+</div>
+
+
+  </main><footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-copy">
+          &copy; 2026 Lee Renahan. All rights reserved.
+        </p>
+        <p class="footer-copy" style="margin-top:0.25rem;">
+          Cyber Security Expert &middot; Author &middot; Educator
+        </p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://www.youtube.com/@leerenahan4043" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.linkedin.com/in/lee-renahan-76a2bb71" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

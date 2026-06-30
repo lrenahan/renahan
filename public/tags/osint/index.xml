@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Osint on Lee Renahan | Cyber Security Expert</title>
+    <link>http://localhost:1313/tags/osint/</link>
+    <description>Recent content in Osint on Lee Renahan | Cyber Security Expert</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 26 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/osint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Attack You Never See Coming: HTML Smuggling &#43; Quasar RAT</title>
+      <link>http://localhost:1313/series/attackers-mindset/html-smuggling/</link>
+      <pubDate>Fri, 26 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/attackers-mindset/html-smuggling/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Blog is coming soon.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Password hash cracking with Hashcat and CUPP</title>
+      <link>http://localhost:1313/series/attackers-mindset/hashcat/</link>
+      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/attackers-mindset/hashcat/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Blog is coming soon.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>QR code to Meterpreter compromise on Android phone</title>
+      <link>http://localhost:1313/series/attackers-mindset/qr-meterpreter/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/attackers-mindset/qr-meterpreter/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Blog is coming soon.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Credential farming - harvest and re-use</title>
+      <link>http://localhost:1313/series/attackers-mindset/cred-harvesting/</link>
+      <pubDate>Sun, 10 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/attackers-mindset/cred-harvesting/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Blog is coming soon.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>EvilGinx with MFA bypass</title>
+      <link>http://localhost:1313/series/attackers-mindset/evilginx/</link>
+      <pubDate>Sun, 10 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/attackers-mindset/evilginx/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Blog is coming soon.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stealing credentials stored in a Chome browser</title>
+      <link>http://localhost:1313/series/attackers-mindset/chrome-passwords/</link>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/attackers-mindset/chrome-passwords/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Blog is coming soon.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

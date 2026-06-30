@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Beer Drinker&#39;s Guide to Email Threats | Lee Renahan | Cyber Security Expert</title>
+  <meta name="description" content="Phishing, malware, invoice fraud, BEC and more — explained using pub analogies, with the technical detail the video couldn&#39;t fit." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body><nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="bracket">[</span>
+      Lee Renahan
+      <span class="bracket">]</span>
+    </a>
+    <ul class="nav-links">
+      
+        <li><a href="/series/beer-drinkers-guide/">Beer Drinker&#39;s Guide</a></li>
+      
+        <li><a href="/series/attackers-mindset/">Attacker&#39;s Mindset</a></li>
+      
+        <li><a href="/books/">Books</a></li>
+      
+    </ul>
+  </div>
+</nav>
+<main>
+
+<div class="post-header" style="background: var(--bg-surface); border-bottom: 1px solid var(--border);">
+  <div class="container--narrow">
+    
+      
+        <span class="series-pill series-pill--beer" style="margin-bottom:1rem; display:inline-flex;">🍺 Beer Drinker's Guide to Tech</span>
+      
+    
+
+    <div class="post-meta">
+      <span>19 June 2026</span>
+      <span>~12 min read</span>
+    </div>
+
+    <h1 class="post-title">The Beer Drinker&#39;s Guide to Email Threats</h1>
+    <p class="post-subtitle">Phishing, malware, invoice fraud, BEC and more — explained using pub analogies, with the technical detail the video couldn&#39;t fit.</p>
+  </div>
+</div>
+
+<div class="container--narrow" style="padding-top: 2.5rem; padding-bottom: 5rem;">
+
+  
+  
+    <div class="video-embed">
+      <iframe
+        src="https://www.youtube.com/embed/QiuAgMpqMec"
+        title="The Beer Drinker&#39;s Guide to Email Threats"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  
+
+  
+  <div class="post-body">
+    <p><em>Read time: ~12 minutes | Series: Tech Behind the Bar</em></p>
+<p>Your inbox is basically a dodgy pub.</p>
+<p>A cosy, familiar place where you just want a quiet pint and maybe a packet of crisps. But instead, it&rsquo;s full of strangers trying to sell you things, steal your things, or convince you to do something catastrophically stupid.</p>
+<p>The video covers the pub analogies. This post goes a layer deeper — keeping the same metaphors but pulling back the curtain on how these attacks actually work, why they&rsquo;re so effective, and what&rsquo;s happening technically when someone falls for one. Think of it as the extended cut, with footnotes.</p>
+<hr>
+<h2 id="-phishing-the-fake-free-pint">🎣 Phishing: The Fake Free Pint</h2>
+<p>The bloke in the corner is shouting about free beer. The pint&rsquo;s in a bucket labelled &ldquo;BEER — TRUST ME.&rdquo; You know the story.</p>
+<p>What the video doesn&rsquo;t cover is <em>how he built the bucket</em>.</p>
+<p>A phishing email works because it successfully impersonates a trusted sender. Attackers do this in a few ways:</p>
+<p><strong>Domain spoofing</strong> is the bluntest approach — sending an email where the visible &ldquo;From&rdquo; name says <em>Barclays Bank</em> but the actual sending address is something like <code>no-reply@barclays-secure-update.net</code>. Most email clients hide the full address by default, which is exactly what attackers rely on. Look past the display name and check the actual domain. If it doesn&rsquo;t match the organisation&rsquo;s real domain precisely, it&rsquo;s fake.</p>
+<p><strong>Lookalike domains</strong> are more sophisticated. Rather than spoofing an address, the attacker registers a real domain that&rsquo;s close enough to the genuine one to fool a distracted glance — <code>barclays-security.com</code>, <code>barcIays.com</code> (that&rsquo;s a capital i, not a lowercase L), or <code>barclays.co.uk.account-verify.com</code> (the actual domain here is <code>account-verify.com</code>; everything before it is just a subdomain). These pass basic checks because they <em>are</em> real domains sending real emails — just not from who they claim to be.</p>
+<p><strong>Credential harvesting pages</strong> are where the damage gets done. The link in the email goes to a page that looks exactly like your bank&rsquo;s login screen — same fonts, same layout, same logo, sometimes even the same URL structure. You type your username and password. The page either shows an error (&ldquo;please try again&rdquo;) or silently redirects you to the real site. Either way, your credentials are already gone.</p>
+<p>The technical defence for organisations is a trio of email authentication standards: <strong>SPF</strong> (Sender Policy Framework), <strong>DKIM</strong> (DomainKeys Identified Mail), and <strong>DMARC</strong> (Domain-based Message Authentication, Reporting and Conformance). Together they let receiving mail servers verify that an email claiming to be from <code>barclays.com</code> was actually sent from Barclays&rsquo; infrastructure — and reject or flag it if not. If you run a domain, having all three configured correctly is non-negotiable. If you <em>receive</em> emails, these standards are what your email provider uses in the background to filter your spam folder.</p>
+<p><strong>The tell:</strong> legitimate organisations will never ask for your password via email. And if you&rsquo;re ever unsure about a link, go directly to the website by typing the address yourself rather than clicking through.</p>
+<hr>
+<h2 id="-spear-phishing-the-personalised-pint">🎯 Spear Phishing: The Personalised Pint</h2>
+<p>The barman knows your name, your usual, and your recent LinkedIn activity. That&rsquo;s not magic — that&rsquo;s open-source intelligence (OSINT).</p>
+<p>Before a spear phishing attack lands in your inbox, the attacker has typically spent time on reconnaissance. They might check your LinkedIn profile for your job title, your manager&rsquo;s name, and the tools your company uses. They&rsquo;ll look at your company&rsquo;s website for org chart clues, press releases, and supplier names. They&rsquo;ll scan job listings (which helpfully announce what software stack you&rsquo;re running). They might even scrape data from previous breaches — your email address and an old password, enough to make a message feel eerily familiar.</p>
+<p>The resulting email references real things: a genuine project name, a colleague, an upcoming deadline. It arrives from an address that looks like your CEO&rsquo;s, or a supplier you actually deal with. It asks for something plausible — a file, a payment, a login.</p>
+<p>This is why security awareness training that says &ldquo;look for bad spelling and generic greetings&rdquo; is only half the story. A well-crafted spear phish is grammatically perfect and disturbingly specific. The red flags are subtler: unexpected urgency, a request that bypasses normal process, or a slight mismatch in the sender&rsquo;s address.</p>
+<p><strong>Whaling</strong> is spear phishing aimed at senior leadership — CFOs, CEOs, board members. High-value targets because they have authority to approve large transactions and often receive less day-to-day security scrutiny than junior staff. The FBI estimates BEC and whaling attacks (which often overlap) have cost businesses globally over $50 billion since 2013.</p>
+<hr>
+<h2 id="-malware-the-pint-that-ruins-your-life">💀 Malware: The Pint That Ruins Your Life</h2>
+<p>You accepted the drink. Here&rsquo;s what&rsquo;s actually in it.</p>
+<p>&ldquo;Malware&rdquo; is a catch-all term — the interesting bit is the delivery mechanism and what it does once it&rsquo;s running.</p>
+<p><strong>Viruses</strong> are the oldest variety: self-replicating code that attaches itself to legitimate files and spreads when those files are shared. Less common now as delivery methods have evolved, but still present in macro-enabled Office documents (more on those shortly).</p>
+<p><strong>Ransomware</strong> has become the dominant threat to organisations over the past decade. Once executed, it typically does three things in quick succession: maps your network to find connected drives and shared storage, exfiltrates a copy of your files to the attacker&rsquo;s infrastructure (useful for extortion even if you restore from backups), then encrypts everything in place and drops a ransom note. Modern ransomware is often delivered as a service — criminal groups license the malware to affiliates who handle the attacks, taking a percentage of each ransom paid. The average ransom demand for businesses now runs into tens or hundreds of thousands of pounds, and that&rsquo;s before you factor in downtime and recovery costs.</p>
+<p><strong>Spyware and keyloggers</strong> sit silently and record. A keylogger captures every keystroke — meaning every password you type, every message you send, every search you make is forwarded to the attacker. Credential-stealing spyware often targets browser-stored passwords specifically, since most people let their browser remember logins for everything.</p>
+<p><strong>Trojans</strong> are malicious code disguised as something useful — a software update, a PDF viewer, a game crack. Unlike a virus, a Trojan doesn&rsquo;t replicate itself; it just sits there, waiting to be opened, at which point it executes its payload: downloading further malware, opening a backdoor, joining your machine to a botnet.</p>
+<p>One important point the pub analogy glosses over: most malware doesn&rsquo;t require you to <em>run</em> anything. Modern attacks exploit <strong>zero-day vulnerabilities</strong> — unpatched security flaws in software — that allow code execution just from opening a document or visiting a page. Keeping your operating system and software updated isn&rsquo;t optional admin; it closes the holes that malware walks through.</p>
+<hr>
+<h2 id="-invoice-fraud-the-mystery-bill">🧾 Invoice Fraud: The Mystery Bill</h2>
+<p>The Unicorn Lager bill looks real. That&rsquo;s the point.</p>
+<p>Invoice fraud works because it exploits a process — the payment workflow — rather than a technical vulnerability. There&rsquo;s no malware involved. Just a convincing document and a distracted human.</p>
+<p>The most common variant targets businesses with a simple technique: the attacker identifies a genuine supplier relationship (often from publicly available information, or a compromised email account), then sends an email impersonating that supplier announcing that their bank details have changed. Please update your records. Here&rsquo;s the new account number. Thanks for your continued business.</p>
+<p>The email goes to someone in finance who genuinely does process invoices from that supplier. The amount on the next invoice is exactly what they&rsquo;d expect. The only difference is where the money goes.</p>
+<p>More sophisticated versions involve <strong>man-in-the-middle email compromise</strong>: the attacker gains access to either the supplier&rsquo;s or the buyer&rsquo;s email account, monitors ongoing invoice threads, and intercepts at the right moment — replacing real payment details with their own, sometimes mid-conversation. The thread looks legitimate because it <em>is</em> the legitimate thread.</p>
+<p>Defences here are procedural rather than technical: a standing policy to verify <em>any</em> change to payment details via a phone call to a known number (not a number provided in the email), and a second-signatory requirement for payments above a certain threshold. Boring, bureaucratic, and extremely effective.</p>
+<hr>
+<h2 id="-business-email-compromise-bec-the-fake-landlord">🧔 Business Email Compromise (BEC): The Fake Landlord</h2>
+<p>The fake landlord doesn&rsquo;t need malware or a clever domain. He just needs to sound plausible and create enough urgency that you don&rsquo;t stop to question it.</p>
+<p>BEC is remarkably low-tech for something so costly. The attack typically involves either a spoofed or compromised email account belonging to a senior person in the organisation — often the CEO or CFO — and a request that creates time pressure: an urgent payment, a confidential acquisition, a regulatory deadline. The message explicitly asks the recipient not to use normal channels (&ldquo;don&rsquo;t run this through the usual process — this is sensitive&rdquo;) which is itself the biggest red flag.</p>
+<p>What makes BEC particularly effective is <strong>pretexting</strong> — the attacker constructs a believable backstory that makes the unusual request seem logical. The CEO is travelling and can&rsquo;t do this through the normal system. The acquisition is confidential and finance can&rsquo;t know yet. The supplier is threatening to pull the contract if payment isn&rsquo;t received today.</p>
+<p>There&rsquo;s also a growing variant using <strong>AI-generated voice and video</strong>. Deepfake technology has now advanced to the point where attackers have successfully impersonated executives on video calls — the employee thinks they&rsquo;re on a Teams call with their CFO. This is rare but not theoretical; documented cases exist of organisations losing millions this way.</p>
+<p>The procedural defence is the same as invoice fraud: any request that bypasses normal financial controls, regardless of who it appears to come from, gets verified through a separate channel before action is taken.</p>
+<hr>
+<h2 id="-attachment-malware-the-suspicious-pie">📎 Attachment Malware: The Suspicious Pie</h2>
+<p>The foil wrapper is a file extension. Here&rsquo;s what&rsquo;s worth knowing about what&rsquo;s inside various types of pie.</p>
+<p><strong>Executable files</strong> (<code>.exe</code>, <code>.msi</code>, <code>.bat</code>, <code>.cmd</code>) are the obvious ones — most organisations now block these at the email gateway. Attackers know this, which is why they&rsquo;ve moved on.</p>
+<p><strong>Macro-enabled Office documents</strong> (<code>.docm</code>, <code>.xlsm</code>) are more insidious. Microsoft Office documents can contain macros — essentially small programs — that run when you open the file. For years, attackers have used these to download and execute malware, which is why modern versions of Office open documents in Protected View by default and require you to explicitly &ldquo;Enable Content&rdquo; to run macros. That &ldquo;Enable Content&rdquo; button is the moment of compromise. Never click it on a document you weren&rsquo;t expecting.</p>
+<p><strong>Archive files</strong> (<code>.zip</code>, <code>.rar</code>, <code>.7z</code>) are used to smuggle past email filters that scan attachments for known malware signatures. The malicious payload is compressed, sometimes password-protected (the password is conveniently in the email body, so the scanner can&rsquo;t unzip it but you can), and extracted once you&rsquo;ve downloaded it.</p>
+<p><strong>ISO and IMG files</strong> are a newer favourite. They&rsquo;re disk image files that, when opened on Windows, mount as a virtual drive — bypassing certain Windows security checks (specifically the Mark of the Web, which flags files downloaded from the internet) because the contents appear to originate from a local drive. Effective precisely because most users have never heard of them.</p>
+<p>A broader point: email gateway filtering, antivirus, and endpoint detection tools are playing a constant catch-up game with attachment-based malware. Signature-based detection only catches <em>known</em> malware. Behaviour-based detection is better but not perfect. Human scepticism about unexpected attachments is the most reliable first line of defence.</p>
+<hr>
+<h2 id="-qr-code-phishing-quishing-scan-for-free-beer">📱 QR Code Phishing (Quishing): Scan for Free Beer</h2>
+<p>QR codes are, technically, just a way of encoding a URL in a format a camera can read. The security problem is that the URL is completely opaque until you&rsquo;ve already scanned it.</p>
+<p>Email security gateways are built to scan links — they inspect URLs, check them against threat databases, and follow redirects to see where a link actually goes. A QR code embedded in an email as an image bypasses all of that. The gateway sees a JPEG. It has no idea there&rsquo;s a URL hidden in the pattern of black and white squares.</p>
+<p>The attacker embeds the QR code in what looks like an MFA notification, a shared document alert, or a payroll update. You scan it on your phone — which almost certainly has fewer security controls than your work laptop — and land on a credential harvesting page.</p>
+<p>The phone dimension matters. Work devices often have mobile device management (MDM) software, secure DNS, and corporate VPN. Personal phones scanning a QR code from a work email are likely to have none of these. The attacker has neatly sidestepped your organisation&rsquo;s entire email security stack.</p>
+<p>Defences: some modern email security platforms now render QR codes and inspect the underlying URL. But the more practical control is awareness — treat a QR code in an email with exactly the same suspicion you&rsquo;d give an unfamiliar link, because that&rsquo;s all it is.</p>
+<hr>
+<h2 id="-social-engineering-im-from-the-brewery">🦺 Social Engineering: &ldquo;I&rsquo;m From the Brewery&rdquo;</h2>
+<p>Dave in a hi-vis jacket is exploiting something that no technical control fully addresses: the human instinct to be helpful, avoid conflict, and defer to apparent authority.</p>
+<p>Social engineering as a discipline predates computers entirely. What&rsquo;s changed is the scale and the research tools available. An attacker preparing a vishing (voice phishing) call against your IT helpdesk will have looked up your company&rsquo;s ticketing system from job listings, found the names of IT staff from LinkedIn, identified recent joiners (who are more likely to have legitimate IT requests), and rehearsed a plausible scenario. The call will reference real internal details. It will create urgency. It will ask the helpdesk agent to do something they&rsquo;re technically permitted to do — like reset a password — for someone they can&rsquo;t actually verify.</p>
+<p>This is why <strong>identity verification procedures</strong> matter. Not just &ldquo;do you know the ticket number&rdquo; but out-of-band verification — calling back on a number held in the directory, not a number the caller provided. And why <strong>least privilege</strong> matters in system design: if a compromised account can only access what that specific person needs for their job, the damage from a successful social engineering attack is contained.</p>
+<p>The psychological mechanisms being exploited are well-documented — Robert Cialdini&rsquo;s principles of influence (authority, urgency, social proof, liking, scarcity, reciprocity) map almost exactly onto the techniques social engineers use. Understanding that these are deliberate levers being pulled is itself a meaningful defence.</p>
+<hr>
+<h2 id="-spam-the-noticeboard-of-nonsense">📬 Spam: The Noticeboard of Nonsense</h2>
+<p>Spam is worth a slightly more technical look because understanding how spam filters work helps explain why they occasionally fail.</p>
+<p>Modern spam filtering uses a combination of techniques. <strong>Reputation scoring</strong> tracks the sending IP address and domain — new domains and IPs with no sending history are automatically suspicious. <strong>Content analysis</strong> looks for known spam phrases, suspicious link patterns, and unusual formatting. <strong>Bayesian filtering</strong> uses statistical models trained on known spam and legitimate email to classify new messages. <strong>Sender authentication</strong> (SPF, DKIM, DMARC as above) verifies that the sender is who they claim to be.</p>
+<p>Spammers have adapted. They use legitimate cloud platforms (SendGrid, Mailchimp, AWS SES) to inherit good sending reputations. They rotate domains constantly. They use image-based content to avoid content scanning. They slowly &ldquo;warm up&rdquo; new sending infrastructure by starting with low volumes of legitimate-looking email before switching to spam.</p>
+<p>The practical upshot: spam filters are very good and occasionally wrong in both directions. A legitimate email lands in your junk folder. A carefully crafted phishing email lands in your inbox. Neither outcome is a failure of the technology so much as evidence that determined adversaries keep evolving.</p>
+<hr>
+<h2 id="-under-the-hood-how-email-actually-works">🔬 Under the Hood: How Email Actually Works</h2>
+<p>One thing the video doesn&rsquo;t cover — and that helps make sense of all the above — is the basic mechanics of how email is sent and received, because several of the attack vectors only make sense once you understand how surprisingly trusting the email system is.</p>
+<p>Email runs on a protocol called <strong>SMTP</strong> (Simple Mail Transfer Protocol), which dates to 1982. In its original design, there was essentially no authentication — any mail server could claim to be sending email from any address. The internet was a small, trusted community of academics and researchers; the idea of adversarial use wasn&rsquo;t on the design brief.</p>
+<p>This is why spoofing a sender address is, technically, trivially easy. You&rsquo;re not hacking anything — you&rsquo;re using the protocol exactly as designed, just dishonestly. SPF, DKIM, and DMARC are retrofitted authentication layers built <em>on top of</em> SMTP specifically to address this gap, added decades after the protocol was designed. They work well when properly implemented, but implementation is inconsistent across the internet, and many domains still don&rsquo;t have all three configured correctly.</p>
+<p>When you send an email, it travels through a chain of mail servers — your outgoing mail server hands it to the recipient&rsquo;s mail server, which delivers it to their mailbox. Each hop is logged in the email&rsquo;s <strong>headers</strong>, which are normally hidden but contain a detailed trail of the email&rsquo;s journey including originating IP addresses, timestamps, and server names. If you&rsquo;re ever trying to determine whether a suspicious email is genuine, viewing the full headers (available in every email client) is where you start.</p>
+<hr>
+<h2 id="-how-to-stay-safe-the-pub-rules-with-reasons">🛡️ How to Stay Safe: The Pub Rules, With Reasons</h2>
+<p>The rules are simple. Here&rsquo;s why each one works.</p>
+<p><strong>Verify before you act.</strong> The entire BEC and invoice fraud playbook depends on the victim not picking up the phone. A 30-second call to a known number breaks the attack completely. The cost of the call is always lower than the cost of not making it.</p>
+<p><strong>Check the sender&rsquo;s actual email address.</strong> Display names are cosmetic. The sending domain is harder to fake convincingly at scale. Get into the habit of looking at the full address, not just the name. On mobile, this usually means tapping the name to expand it.</p>
+<p><strong>Treat urgency as a red flag.</strong> Urgency is a cognitive shortcut attacker deliberately engineer. When a message creates time pressure, that pressure is doing the work of preventing you from thinking clearly. Slow down. Verify through a different channel.</p>
+<p><strong>Keep software updated.</strong> Unpatched vulnerabilities are how malware executes without you clicking anything. Operating system and application updates are frequently security patches. The update you&rsquo;ve been ignoring for three weeks might be the one that matters.</p>
+<p><strong>Enable multi-factor authentication (MFA).</strong> If a phishing attack does successfully harvest your credentials, MFA is the next barrier. The attacker has your password but not your phone. It&rsquo;s not undefeatable — real-time phishing proxies can capture MFA tokens — but it blocks the vast majority of credential-based attacks and raises the cost and complexity of the rest significantly.</p>
+<p><strong>Use a password manager.</strong> One underappreciated benefit: password managers autofill credentials based on the exact domain. If you&rsquo;re on a convincing lookalike of your bank&rsquo;s website, your password manager won&rsquo;t autofill — because it knows the domain doesn&rsquo;t match. That failed autofill is itself a warning.</p>
+<hr>
+<h2 id="last-orders">Last Orders</h2>
+<p>Email threats aren&rsquo;t mysterious. They&rsquo;re a combination of technical exploitation and social manipulation, and they work because email is an old, trusting protocol used by billions of people who are frequently distracted.</p>
+<ul>
+<li><strong>Phishing</strong> exploits domain spoofing and lookalike infrastructure to harvest credentials — countered by sender authentication standards (SPF, DKIM, DMARC) and human scepticism</li>
+<li><strong>Spear phishing</strong> adds OSINT-based personalisation to make attacks plausible; the tells are subtler but still present</li>
+<li><strong>Malware</strong> exploits file handling, macro execution, and unpatched software vulnerabilities — keep everything updated and be suspicious of unexpected attachments</li>
+<li><strong>Invoice fraud and BEC</strong> are procedural attacks that bypass technology entirely — the defence is verification policy, not a firewall</li>
+<li><strong>Quishing</strong> routes around email security gateways by hiding URLs in images</li>
+<li><strong>Social engineering</strong> exploits cognitive biases and human helpfulness — awareness of the techniques being used is a genuine defence</li>
+<li><strong>Spam</strong> is mostly noise managed by increasingly sophisticated filtering, but the occasional targeted email hides within it</li>
+</ul>
+<p>The email system was designed for trust. Attackers have spent forty years learning how to exploit that. The defences — technical and human — are retrofitted and imperfect. Which means the most reliable control is still a sceptical mind and a willingness to pick up the phone.</p>
+<p>Stay sharp. Verify everything. And for the love of hops — check the sender address.</p>
+<p><em>Cheers — and see you in the next one.</em> 🍺</p>
+<hr>
+<p><em>Missed the previous instalment? Read <a href="/posts/bdg-how-the-internet-works/">The Beer Drinker&rsquo;s Guide to How the Internet Works</a>.</em></p>
+
+  </div>
+
+  <hr class="divider">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <span></span>
+    
+  </div>
+
+</div>
+
+
+  </main><footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-copy">
+          &copy; 2026 Lee Renahan. All rights reserved.
+        </p>
+        <p class="footer-copy" style="margin-top:0.25rem;">
+          Cyber Security Expert &middot; Author &middot; Educator
+        </p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://www.youtube.com/@leerenahan4043" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.linkedin.com/in/lee-renahan-76a2bb71" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

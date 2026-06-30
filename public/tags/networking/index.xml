@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Networking on Lee Renahan | Cyber Security Expert</title>
+    <link>http://localhost:1313/tags/networking/</link>
+    <description>Recent content in Networking on Lee Renahan | Cyber Security Expert</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Thu, 10 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/networking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pints, Privacy &amp; Peach IPAs</title>
+      <link>http://localhost:1313/series/beer-drinkers-guide/beer-drinkers-guide-to-vpns/</link>
+      <pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/beer-drinkers-guide/beer-drinkers-guide-to-vpns/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Welcome to The Service Provider Arms — where every pint tells a story. Today&amp;rsquo;s tale? How VPNs work, told through the noble art of ordering beer.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;You might already know what a VPN is — a Virtual Private Network — but if someone asked you to explain it in plain English, you&amp;rsquo;d probably wave your hand vaguely at the air and say &amp;ldquo;something to do with privacy.&amp;rdquo; That&amp;rsquo;s fair. The technology is genuinely useful but routinely explained like a GCSE textbook. So let&amp;rsquo;s fix that.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pints, Packets &amp; Protocols</title>
+      <link>http://localhost:1313/series/beer-drinkers-guide/pints-packets-protocols/</link>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/beer-drinkers-guide/pints-packets-protocols/</guid>
+      <description>&lt;p&gt;You use the internet every day — but have you ever stopped to wonder what&amp;rsquo;s actually happening when you type a web address and hit Enter? Routers, DNS, TCP, IP addresses&amp;hellip; it can all sound pretty intimidating. So let&amp;rsquo;s forget the jargon for a moment and head to the pub instead.&lt;/p&gt;&#xA;&lt;p&gt;In this post we&amp;rsquo;re going to walk through how the internet works, using the world&amp;rsquo;s biggest bar as our guide. By the time you&amp;rsquo;ve finished reading, you&amp;rsquo;ll understand what happens every time you visit a website — and you might even be thirsty.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
