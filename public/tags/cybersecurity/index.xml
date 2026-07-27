@@ -6,8 +6,15 @@
     <description>Recent content in Cybersecurity on Lee Renahan | Cyber Security Expert</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 11 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/cybersecurity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Bar Next Door: How Adversary-in-the-Middle Phishing Steals Your Session, Not Just Your Password</title>
+      <link>http://localhost:1313/series/beer-drinkers-guide/aitm-phishing-session-cookie-theft/</link>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/series/beer-drinkers-guide/aitm-phishing-session-cookie-theft/</guid>
+      <description>&lt;p&gt;You&amp;rsquo;ve done everything right. Strong, unique password. MFA switched on for every account that offers it. By most advice you&amp;rsquo;ve read, you&amp;rsquo;re covered.&lt;/p&gt;&#xA;&lt;p&gt;There&amp;rsquo;s an attack running at scale right now that walks past both of those controls without breaking either of them. It doesn&amp;rsquo;t guess your password. It doesn&amp;rsquo;t defeat your MFA. It just stands in the middle of the conversation, watches it happen, and takes what comes out the other end.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Stamps, Wristbands &amp; Single Sign-On</title>
       <link>http://localhost:1313/series/beer-drinkers-guide/saml-and-sso-explained/</link>

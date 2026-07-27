@@ -5,8 +5,8 @@ date: 2026-06-19
 series: "beer-drinkers-guide"
 readtime: "~12 min read"
 tags: ["cyber security", "dark web", "Tor", "privacy", "anonymity", "encryption", "explainer", "onion routing"]
-youtube_id: ""
-youtube_url: ""
+youtube_id: "-mimcxFlh6o"
+youtube_url: "https://www.youtube.com/watch?v=-mimcxFlh6o"
 ---
 
 *Read time: ~12 minutes | Series: Tech Behind the Bar*

@@ -6,8 +6,57 @@
     <description>Recent content in Tags on Lee Renahan | Cyber Security Expert</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 19 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 26 Jul 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aitm</title>
+      <link>http://localhost:1313/tags/aitm/</link>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/aitm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cybersecurity</title>
+      <link>http://localhost:1313/tags/cybersecurity/</link>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/cybersecurity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Device-Code-Phishing</title>
+      <link>http://localhost:1313/tags/device-code-phishing/</link>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/device-code-phishing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Identity-Security</title>
+      <link>http://localhost:1313/tags/identity-security/</link>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/identity-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mfa</title>
+      <link>http://localhost:1313/tags/mfa/</link>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/mfa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Phishing</title>
+      <link>http://localhost:1313/tags/phishing/</link>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/phishing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Session-Hijacking</title>
+      <link>http://localhost:1313/tags/session-hijacking/</link>
+      <pubDate>Sun, 26 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/session-hijacking/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Anonymity</title>
       <link>http://localhost:1313/tags/anonymity/</link>
@@ -37,7 +86,7 @@
       <description></description>
     </item>
     <item>
-      <title>DMARC</title>
+      <title>Dmarc</title>
       <link>http://localhost:1313/tags/dmarc/</link>
       <pubDate>Fri, 19 Jun 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/dmarc/</guid>
@@ -79,13 +128,6 @@
       <description></description>
     </item>
     <item>
-      <title>Phishing</title>
-      <link>http://localhost:1313/tags/phishing/</link>
-      <pubDate>Fri, 19 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/phishing/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Privacy</title>
       <link>http://localhost:1313/tags/privacy/</link>
       <pubDate>Fri, 19 Jun 2026 00:00:00 +0000</pubDate>
@@ -118,13 +160,6 @@
       <link>http://localhost:1313/tags/authentication/</link>
       <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/authentication/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Cybersecurity</title>
-      <link>http://localhost:1313/tags/cybersecurity/</link>
-      <pubDate>Thu, 11 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cybersecurity/</guid>
       <description></description>
     </item>
     <item>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Bar Next Door: How Adversary-in-the-Middle Phishing Steals Your Session, Not Just Your Password | Lee Renahan | Cyber Security Expert</title>
+  <meta name="description" content="MFA doesn&#39;t stop everything. A technical breakdown of adversary-in-the-middle (AiTM) phishing, reverse-proxy toolkits like Evilginx, session cookie theft, and device code phishing — plus what actually defends against them." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body><nav class="site-nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <span class="bracket">[</span>
+      Lee Renahan
+      <span class="bracket">]</span>
+    </a>
+    <ul class="nav-links">
+      
+        <li><a href="/series/beer-drinkers-guide/">Beer Drinker&#39;s Guide</a></li>
+      
+        <li><a href="/series/attackers-mindset/">Attacker&#39;s Mindset</a></li>
+      
+        <li><a href="/books/">Books</a></li>
+      
+    </ul>
+  </div>
+</nav>
+<main>
+
+<div class="post-header" style="background: var(--bg-surface); border-bottom: 1px solid var(--border);">
+  <div class="container--narrow">
+    
+      
+        <span class="series-pill series-pill--beer" style="margin-bottom:1rem; display:inline-flex;">🍺 Beer Drinker's Guide to Tech</span>
+      
+    
+
+    <div class="post-meta">
+      <span>26 July 2026</span>
+      <span>11 minutes</span>
+    </div>
+
+    <h1 class="post-title">The Bar Next Door: How Adversary-in-the-Middle Phishing Steals Your Session, Not Just Your Password</h1>
+    <p class="post-subtitle">MFA doesn&#39;t stop everything. A technical breakdown of adversary-in-the-middle (AiTM) phishing, reverse-proxy toolkits like Evilginx, session cookie theft, and device code phishing — plus what actually defends against them.</p>
+  </div>
+</div>
+
+<div class="container--narrow" style="padding-top: 2.5rem; padding-bottom: 5rem;">
+
+  
+  
+    
+  
+
+  
+  <div class="post-body">
+    <p>You&rsquo;ve done everything right. Strong, unique password. MFA switched on for every account that offers it. By most advice you&rsquo;ve read, you&rsquo;re covered.</p>
+<p>There&rsquo;s an attack running at scale right now that walks past both of those controls without breaking either of them. It doesn&rsquo;t guess your password. It doesn&rsquo;t defeat your MFA. It just stands in the middle of the conversation, watches it happen, and takes what comes out the other end.</p>
+<p>This is adversary-in-the-middle phishing — AiTM — and if you only know it by the older name, man-in-the-middle, it&rsquo;s worth updating your mental model. The mechanics have moved on.</p>
+<h2 id="-the-pop-up-bar-next-door">🍺 The Pop-Up Bar Next Door</h2>
+<p>Picture your usual bar. Now picture someone opening an identical bar right next door this week — same signage, same till receipts, same everything. Except this one isn&rsquo;t actually serving you anything. Every order you place gets carried next door to the real bar, poured for real, and handed straight back. You&rsquo;re drinking real beer. You just don&rsquo;t know there&rsquo;s someone standing in the middle of every transaction.</p>
+<p>That&rsquo;s the shape of an AiTM attack. The victim isn&rsquo;t interacting with a crude fake — they&rsquo;re interacting with a proxy that sits between them and the genuine service, passing traffic through in both directions in real time.</p>
+<h2 id="-how-the-attack-actually-works">🛠️ How the Attack Actually Works</h2>
+<p>Strip away the analogy and the mechanism runs in five steps:</p>
+<ol>
+<li><strong>The reverse proxy goes up.</strong> The attacker deploys infrastructure — commonly built with toolkits like Evilginx or Modlishka — that sits between the victim and the real login page. It&rsquo;s not a static clone; it&rsquo;s a live proxy that forwards requests to the genuine site and relays the responses back.</li>
+<li><strong>The victim authenticates against the real site.</strong> A phishing link lands the victim on the proxy&rsquo;s domain, which renders the real site&rsquo;s login page almost pixel-for-pixel — because in large part, it <em>is</em> the real page, fetched live. The victim enters their username and password, which the proxy forwards straight to the legitimate service.</li>
+<li><strong>The MFA challenge is relayed, not defeated.</strong> The real site issues its normal second-factor challenge. The proxy passes this through to the victim too, and the victim completes it genuinely — because as far as their device and the identity provider are concerned, this <em>is</em> a real login attempt.</li>
+<li><strong>The real site authenticates the session.</strong> Having received valid credentials and a valid MFA response, the legitimate service does exactly what it&rsquo;s supposed to do: it issues a session token, typically delivered as a cookie in the response headers.</li>
+<li><strong>The proxy captures the token in transit.</strong> Because the proxy is sitting in the full path of the exchange, it sees that cookie the moment it&rsquo;s issued — before it ever reaches the victim&rsquo;s browser in a form only they control.</li>
+</ol>
+<blockquote>
+<p>Password theft gets an attacker to the front door. Session token theft gets them past every door in the building, because the session token <em>is</em> what &ldquo;logged in&rdquo; means to the server from that point forward.</p>
+</blockquote>
+<h2 id="-why-the-session-cookie-is-the-real-prize">🔑 Why the Session Cookie Is the Real Prize</h2>
+<p>Once authentication succeeds, most web applications don&rsquo;t ask you to prove who you are on every single request — that would be a miserable user experience. Instead, the server issues a session token (usually a cookie, sometimes a bearer token for APIs) and trusts any request that presents it. The login process only has to happen once; the token does the ongoing work.</p>
+<p>That&rsquo;s precisely what makes it valuable to steal. With a captured session cookie, an attacker can load it into their own browser — often using an extension or simple cookie-editing tool — and be treated by the application as an already-authenticated user. No password required. No MFA prompt triggered. The identity provider already did its job; the attacker is just borrowing the receipt.</p>
+<p>This is also why AiTM defeats MFA without ever attacking MFA directly. Multi-factor authentication verifies identity <em>at the point of login</em>. It has no visibility into, and no control over, what happens to the token that login produces afterward. If that token can be lifted in transit, MFA has done its job perfectly and the account is still compromised.</p>
+<blockquote>
+<p>MFA proves who you are at the door. It has no say over what happens to the pass once you&rsquo;re handed it.</p>
+</blockquote>
+<p>Some session cookies carry protective flags — <code>HttpOnly</code> (inaccessible to client-side scripts), <code>Secure</code> (only sent over HTTPS), <code>SameSite</code> (restricting cross-site sending). These are useful against other attack classes, like cross-site scripting, but they don&rsquo;t stop AiTM: the proxy isn&rsquo;t reading the cookie via a script or a cross-site request, it&rsquo;s sitting directly in the legitimate request/response path where the cookie is issued in the first place.</p>
+<h2 id="-the-other-route-in-device-code-phishing">🕵️ The Other Route In: Device Code Phishing</h2>
+<p>There&rsquo;s a second technique worth understanding, because it achieves the same outcome — a stolen, authenticated session — without needing any proxy infrastructure at all.</p>
+<p>Some authentication flows are built for devices with no convenient way to type a password, like smart TVs, streaming boxes, or command-line tools. This is the OAuth 2.0 <strong>device authorization grant</strong>. The device displays a short code and asks the user to visit a URL on a separate device — usually their phone — and enter that code to approve the login.</p>
+<p>Device code phishing abuses this legitimate flow directly:</p>
+<ol>
+<li>The attacker initiates a device code login themselves, against a real service, and obtains a valid code.</li>
+<li>The attacker sends that code to the target — by text, email, or a fake IT helpdesk call — framed as something routine: a verification step, a support process, a sync request.</li>
+<li>The victim, believing this is a normal part of their day, visits the real login page and enters the code.</li>
+<li>The identity provider completes the authorization — for the <em>attacker&rsquo;s</em> session, approved by the <em>victim&rsquo;s</em> credentials.</li>
+</ol>
+<p>No fake domain. No reverse proxy. No suspicious URL to spot, because the victim never leaves the genuine site. They&rsquo;re simply persuaded to approve a login that isn&rsquo;t theirs. It&rsquo;s the same end state as AiTM — a valid, authenticated session in the attacker&rsquo;s hands — reached through a social engineering step instead of a technical proxy.</p>
+<blockquote>
+<p>No pop-up bar required this time. Just someone asking you to hand the wristband over directly, because it looked like part of the normal process.</p>
+</blockquote>
+<h2 id="-what-actually-defends-against-this">🛡️ What Actually Defends Against This</h2>
+<p>Because both techniques route around traditional MFA rather than through it, the effective mitigations focus on the session and the authentication <em>method</em>, not just adding more factors:</p>
+<ul>
+<li><strong>Phishing-resistant authentication (FIDO2 / passkeys).</strong> These bind the credential cryptographically to the legitimate origin domain. There&rsquo;s no code or one-time password to relay, because the authentication ceremony itself checks it&rsquo;s talking to the real site — a proxy on a different domain simply fails the check.</li>
+<li><strong>Token binding / continuous access evaluation.</strong> Tying a session token to signals like device identity, IP range, or client fingerprint means a token lifted from one context doesn&rsquo;t work cleanly in another. Microsoft Entra&rsquo;s Continuous Access Evaluation and similar controls in other identity platforms are built specifically to catch this class of theft.</li>
+<li><strong>Conditional access policies that evaluate post-authentication, not just at login.</strong> Flagging impossible travel, unfamiliar device fingerprints, or anomalous request patterns <em>after</em> a session is established closes some of the gap MFA leaves open.</li>
+<li><strong>Restricting and monitoring device code flows.</strong> Many identity providers allow device code authentication to be disabled entirely for accounts that don&rsquo;t need it, removing that route as an option.</li>
+<li><strong>User habits that still matter.</strong> Checking the actual domain before entering credentials, and treating any unexpected request to &ldquo;enter this code&rdquo; or &ldquo;approve this sign-in&rdquo; with suspicion — even when it isn&rsquo;t accompanied by a dodgy-looking link.</li>
+</ul>
+<p>None of these are a single silver bullet, and that&rsquo;s the point worth taking away: AiTM and device code phishing both succeed by targeting the <em>session</em>, not the <em>credential</em>, so defenses aimed only at strengthening the credential check — however many factors deep — leave that layer untouched.</p>
+<h2 id="-last-orders">🍻 Last Orders</h2>
+<ul>
+<li>AiTM phishing uses a live reverse proxy (Evilginx, Modlishka, and similar toolkits) to relay real login traffic between victim and legitimate site.</li>
+<li>Because the victim completes a genuine login, including MFA, the attacker never needs to defeat authentication — they capture the session cookie issued afterward.</li>
+<li>Session cookies typically aren&rsquo;t protected against this by <code>HttpOnly</code>, <code>Secure</code>, or <code>SameSite</code> flags, since the proxy sits in the legitimate request path rather than accessing the cookie via script or cross-site request.</li>
+<li>Device code phishing abuses the OAuth device authorization grant flow, tricking a victim into approving a login on the attacker&rsquo;s behalf — no proxy or fake domain needed.</li>
+<li>MFA verifies identity at login; it has no control over the session token issued after, which is exactly the gap both techniques exploit.</li>
+<li>Effective defenses target the session and the authentication method itself: phishing-resistant passkeys, token binding, continuous access evaluation, and restricting device code flows.</li>
+</ul>
+<p><em>Cheers — and see you in the next one.</em></p>
+<hr>
+<p><strong>Related reading:</strong> if session security has you thinking about how your traffic gets protected in transit more broadly, the previous post in this series — <a href="/posts/vpns-explained/">VPNs Explained</a> — covers how encrypted tunnels work and where they do (and don&rsquo;t) protect you.</p>
+
+  </div>
+
+  <hr class="divider">
+
+  <div style="display: flex; justify-content: space-between; align-items: center;">
+    <span></span>
+    
+  </div>
+
+</div>
+
+
+  </main><footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <p class="footer-copy">
+          &copy; 2026 Lee Renahan. All rights reserved.
+        </p>
+        <p class="footer-copy" style="margin-top:0.25rem;">
+          Cyber Security Expert &middot; Author &middot; Educator
+        </p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://www.youtube.com/@leerenahan4043" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.linkedin.com/in/lee-renahan-76a2bb71" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
